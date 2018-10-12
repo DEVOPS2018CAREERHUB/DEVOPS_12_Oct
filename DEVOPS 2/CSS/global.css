@@ -1,0 +1,200 @@
+﻿body {
+	color: #000000;
+	font-family: Verdana, Arial, Geneva, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+	font-size: x-small;
+}
+
+@media print
+{    
+    .printhide, .printhide *
+    {
+        display: none !important;
+    }
+
+}
+
+
+
+a:link {
+	color: #0000cd;
+	text-decoration: none;
+}
+a:visited {
+	color: #8B008B;
+	text-decoration: none;
+}
+a:hover {
+	color: #596673;
+	text-decoration: underline;
+}
+a:active {
+	color: #8B008B;
+	text-decoration: none;
+}
+
+
+p {
+	margin-bottom: 10px;
+	margin-top: 0px;
+	font-size: x-small;
+} 
+
+
+li {
+	margin-bottom: 2px;
+}
+
+table, td, th {
+	font-size: x-small;
+	
+} 
+
+form {
+	margin: 0px;
+	padding: 0px;
+}
+
+input, textarea {
+	font-family: Verdana, Arial, Geneva, Helvetica, sans-serif;
+}
+
+
+
+.NMMUblueColour{
+	color: #003058;
+}
+
+.redText{
+	color: #FF0000;
+}
+
+.greenText{
+	color: green;	
+}
+
+.lightblueText{
+	color: #00c0c0;	
+}
+
+.blueText{
+	color: navy;	
+}
+
+.purpleText{
+	color: purple;	
+}
+
+.lightpurpleText{
+	color: #FF00FF;	
+}
+
+.goldText{
+	color: #CC9900;	
+}
+
+.tealText{
+	color: teal;	
+}
+
+.greenText{
+	color: #00CC00;	
+}
+
+.greyText{
+	color: #666666;
+}
+.orangeText{
+	color: #ff6600;	
+}
+MMUyellowText{
+	color: #CC6600;	
+}
+
+
+.xsmall {
+	font-family: Verdana, Arial, Geneva, Helvetica, sans-serif;
+	font-size: x-small;
+} 
+
+#module img {
+	margin: 10px;
+}
+
+#module #homeimage img, #module #imgdocstore img {
+	background-color: #FFFFFF;
+}
+
+#advSearch {
+	text-align: right;
+}
+
+
+table.contacts, td.contacts, th.contacts {
+	border: none;
+	padding: 2px;
+	text-align: left;
+}
+
+
+.searchTextBox {
+	width: 80px; 
+	height: 13px;
+}
+ 
+
+
+#javascript {
+	text-align: center;
+	font-size: x-small;
+	
+}
+
+.centered {
+	 display: block;
+    margin-left: auto;
+    margin-right: auto;
+	 text-align: center;
+}
+
+
+form input.button, #emailto form input.button
+{
+	width: auto; 
+	height: auto;
+	border: 3px double #888888;
+	border-top-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+} 
+
+form input.searchImage {
+	width: 13px;
+	height: 12px;
+	border: none;
+}
+
+form select{
+	font-size: x-small;
+}
+
+
+.formFormat{
+	background-color: #FFFFFF;
+	text-align: left;
+}
+
+#formFill td {
+	font-size: x-small;
+}
+
+.formComment {
+	background-color: #E8E8E8;	
+	text-align: justify;
+}
+
+
+.contentheading{
+	font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+	font-size: small;
+}

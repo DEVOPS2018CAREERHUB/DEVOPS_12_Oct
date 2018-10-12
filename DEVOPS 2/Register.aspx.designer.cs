@@ -67,15 +67,6 @@ namespace DEVOPS_2 {
         protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// rbnStudorEmp control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList rbnStudorEmp;
-        
-        /// <summary>
         /// txt1 control.
         /// </summary>
         /// <remarks>
@@ -110,5 +101,50 @@ namespace DEVOPS_2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt4;
+        
+        /// <summary>
+        /// lblpasswords control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblpasswords;
+        
+        /// <summary>
+        /// btnStudent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnStudent;
+        
+        /// <summary>
+        /// btnEmployer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnEmployer;
+        
+        /// <summary>
+        /// lblIncorrectEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblIncorrectEmail;
+        
+        /// <summary>
+        /// lblStudNoNotRegistered control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblStudNoNotRegistered;
     }
 }

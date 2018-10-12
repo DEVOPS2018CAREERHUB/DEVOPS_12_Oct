@@ -21,7 +21,17 @@ namespace DEVOPS_2
 
         protected void Button1_Click1(object sender, EventArgs e)
         {
-            Response.Redirect("Register.aspx");
+            Response.Redirect("GettingStarted_Page.aspx");
+        }
+
+        protected void btnAdmin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AdminLogin.aspx");
+        }
+
+        protected void btnLogin_Click1(object sender, EventArgs e)
+        {
+            Response.Redirect("EmployerLogin.aspx");
         }
     }
 }
