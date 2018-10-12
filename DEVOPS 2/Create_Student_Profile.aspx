@@ -28,6 +28,7 @@
         }
         .testing {
             opacity: .78; 
+            width: 10px;
         }
       
 
