@@ -26,6 +26,9 @@
             color: #0000FF;
             opacity: .78; 
         }
+        .test{
+
+        }
 
     </style>
 
