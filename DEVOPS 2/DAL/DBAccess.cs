@@ -787,6 +787,7 @@ namespace DAL
             }
             return status;
         }
+      
 
 
         public bool UpdateJobPost(UpdateJobPost updateJobPost)

@@ -111,12 +111,12 @@ namespace BLL
         {
             return dBAccess.GetAllCities();
         }
-
+      
         public List<UspGetAllIndustries> BLL_GetAllIndustries()
         {
             return dBAccess.GetAllIndustries();
         }
-
+        
         public List<UspGetAllStudents> BLL_GetAllStudents()
         {
             return dBAccess.GetAllStudents();

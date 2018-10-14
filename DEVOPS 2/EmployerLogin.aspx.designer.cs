@@ -40,15 +40,6 @@ namespace Project_DevOps {
         protected global::System.Web.UI.WebControls.Button studBtn;
         
         /// <summary>
-        /// empBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button empBtn;
-        
-        /// <summary>
         /// empUsernametxt control.
         /// </summary>
         /// <remarks>
@@ -74,15 +65,6 @@ namespace Project_DevOps {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label empPasswordlbl;
-        
-        /// <summary>
-        /// nmuBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button nmuBtn;
         
         /// <summary>
         /// RegisterBtn control.

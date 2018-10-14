@@ -177,6 +177,7 @@
     <Content Include="StudentLogin2.aspx" />
     <Content Include="Student_HomePage.aspx" />
     <Content Include="UpdateStudentProfile.aspx" />
+    <Content Include="ViewAddJob.aspx" />
     <Content Include="View_Employer_profile.aspx" />
     <Content Include="View_Student_Profile.aspx" />
     <Content Include="Web.config" />
@@ -296,6 +297,7 @@
     <Compile Include="TypeLibrary\ViewModels\UspGetAllCountries.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetAllEmployers.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetAllIndustries.cs" />
+    <Compile Include="TypeLibrary\ViewModels\UspGetAllJobPosts.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetAllJobPostsByEmployer.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetAllJobPostsByQualification.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetAllJobPostsBySkill.cs" />
@@ -319,6 +321,13 @@
     </Compile>
     <Compile Include="UpdateStudentProfile.aspx.designer.cs">
       <DependentUpon>UpdateStudentProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAddJob.aspx.cs">
+      <DependentUpon>ViewAddJob.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAddJob.aspx.designer.cs">
+      <DependentUpon>ViewAddJob.aspx</DependentUpon>
     </Compile>
     <Compile Include="View_Employer_profile.aspx.cs">
       <DependentUpon>View_Employer_profile.aspx</DependentUpon>

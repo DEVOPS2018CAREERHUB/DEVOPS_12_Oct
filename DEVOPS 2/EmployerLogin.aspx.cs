@@ -17,6 +17,7 @@ namespace Project_DevOps
         UspCheckEmployerLogin checkEmp = new UspCheckEmployerLogin();
         protected void Page_Load(object sender, EventArgs e)
         {
+        
             string sEmpEmail = checkEmp.employerEmail;
             string sEmpPassword = checkEmp.employerPassword;
             errorLbl.Visible = false;
@@ -37,7 +38,14 @@ namespace Project_DevOps
             Response.Redirect("https://www.mandela.ac.za/");
         }
 
- 
+
+        public string username
+        {
+            get
+            { 
+                return empUsernametxt.Text;
+            }
+        }
 
         protected void RegisterBtn_Click(object sender, EventArgs e)
         {
