@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Project_DevOps {
+namespace DEVOPS_2 {
     
     
-    public partial class EmployerLogin {
+    public partial class ForgotPassword {
         
         /// <summary>
         /// form1 control.
@@ -22,84 +22,57 @@ namespace Project_DevOps {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// empPasswordtxt control.
+        /// lblForgotPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox empPasswordtxt;
+        protected global::System.Web.UI.WebControls.Label lblForgotPassword;
         
         /// <summary>
-        /// studBtn control.
+        /// txtUsename control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button studBtn;
+        protected global::System.Web.UI.WebControls.TextBox txtUsename;
         
         /// <summary>
-        /// empUsernametxt control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox empUsernametxt;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
         
         /// <summary>
-        /// empLoginlbl control.
+        /// txtNewPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label empLoginlbl;
+        protected global::System.Web.UI.WebControls.TextBox txtNewPassword;
         
         /// <summary>
-        /// empPasswordlbl control.
+        /// txtComfirmPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label empPasswordlbl;
+        protected global::System.Web.UI.WebControls.TextBox txtComfirmPassword;
         
         /// <summary>
-        /// RegisterBtn control.
+        /// btnRestPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RegisterBtn;
-        
-        /// <summary>
-        /// empLoginBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button empLoginBtn;
-        
-        /// <summary>
-        /// errorLbl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label errorLbl;
-        
-        /// <summary>
-        /// HypLinkForgot control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HypLinkForgot;
+        protected global::System.Web.UI.WebControls.Button btnRestPassword;
     }
 }

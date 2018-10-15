@@ -72,17 +72,17 @@
                                 <img alt="Logout" src="images/login.png" /></a></li>
                         </ul>
                     </div>
-                    				<ul id="divNavbarTop" class="nav navbar-nav sm" data-smartmenus-id="15270843286636987">
-					<li>
-					<a href="Landing_Page.aspx">
-					Home</a></li>
-					<li>
-					<a href="AboutUsPage">
-					About Us</a></li>
-					<li>
-					<a href="MeetTheTeamPage">
-					Meet the Team</a></li>					
-				</ul>
+                                    <ul id="divNavbarTop" class="nav navbar-nav sm" data-smartmenus-id="15270843286636987">
+                    <li>
+                    <a href="Landing_Page.aspx">
+                    Home</a></li>
+                    <li>
+                    <a href="AboutUsPage">
+                    About Us</a></li>
+                    <li>
+                    <a href="MeetTheTeamPage">
+                    Meet the Team</a></li>					
+                </ul>
 
                 </div>
             </div>

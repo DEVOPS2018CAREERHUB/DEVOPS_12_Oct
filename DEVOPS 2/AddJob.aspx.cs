@@ -21,8 +21,7 @@ namespace Project_DevOps
             
             if (!IsPostBack)
             {
-                EmployerLogin emp = (EmployerLogin)Context.Handler;
-                LblEmpName.Text = emp.username;
+               // empUsernametxt.text = Request.QueryString[""];
 
                 countryDdl.DataSource = BLL_handler.BLL_GetAllCountries();
                 countryDdl.DataTextField = "CountryDescription";

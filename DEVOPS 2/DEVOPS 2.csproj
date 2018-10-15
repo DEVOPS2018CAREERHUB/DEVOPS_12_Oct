@@ -106,6 +106,7 @@
     <Content Include="DAL.csproj" />
     <Content Include="EmployerLogin.aspx" />
     <Content Include="Employer_HomePage.aspx" />
+    <Content Include="ForgotPassword.aspx" />
     <Content Include="GettingStarted_Page.aspx" />
     <Content Include="HowItWorks_Page.aspx" />
     <Content Include="images1\Addjob05.png" />
@@ -235,6 +236,13 @@
     </Compile>
     <Compile Include="Employer_HomePage.aspx.designer.cs">
       <DependentUpon>Employer_HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="General.Master.cs">
       <DependentUpon>General.Master</DependentUpon>

@@ -50,10 +50,12 @@
         <asp:Label ID="empLoginlbl" runat="server" ForeColor="Yellow" style="z-index: 1; left: 714px; top: 190px; position: absolute; width: 269px; height: 24px; font-size: large; margin-top: 0px;" Text="Employer Email"></asp:Label>
         <asp:Label ID="empPasswordlbl" runat="server" ForeColor="Yellow" style="z-index: 1; left: 712px; top: 264px; position: absolute; height: 24px; width: 251px; font-size: large" Text="Employer Password"></asp:Label>
     
-        <asp:Button ID="RegisterBtn" runat="server" BackColor="Yellow" OnClick="RegisterBtn_Click" style="z-index: 1; left: 715px; top: 371px; position: absolute; height: 37px; width: 80px; font-size: medium; right: 471px" Text="Register" />
-        <asp:Button ID="empLoginBtn" runat="server" BackColor="Yellow" style="z-index: 1; left: 885px; top: 362px; position: absolute; height: 34px; width: 86px; font-size: medium; bottom: 161px; margin-top: 9px;" Text="Login" OnClick="empLoginBtn_Click" />
+        <asp:Button ID="RegisterBtn" runat="server" BackColor="Yellow" OnClick="RegisterBtn_Click" style="z-index: 1; left: 715px; top: 397px; position: absolute; height: 37px; width: 80px; font-size: medium; right: 471px" Text="Register" />
+        <asp:Button ID="empLoginBtn" runat="server" BackColor="Yellow" style="z-index: 1; left: 885px; top: 390px; position: absolute; height: 34px; width: 86px; font-size: medium; bottom: 161px; margin-top: 9px;" Text="Login" OnClick="empLoginBtn_Click" />
     
-        <asp:Label ID="errorLbl" runat="server" ForeColor="#FF3300" style="z-index: 1; left: 717px; top: 337px; position: absolute; height: 26px; width: 234px; font-size: medium; font-weight: 700" Text="Incorrect Username or Password"></asp:Label>
+        <asp:Label ID="errorLbl" runat="server" ForeColor="#FF3300" style="z-index: 1; left: 717px; top: 337px; position: absolute; height: 26px; width: 262px; font-size: medium; font-weight: 700" Text="Incorrect Username or Password"></asp:Label>
+    
+        <asp:HyperLink ID="HypLinkForgot" runat="server"  style="top: 362px; font-weight: 700; visibility:visible"  >Forgot Password</asp:HyperLink>
     
     </div>
         <div class="container-fluid navbar-blue-gradient navbar-fixed-top tbsZindex">
