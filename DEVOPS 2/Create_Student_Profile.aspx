@@ -24,7 +24,7 @@
              background-color: #F0F0F0;
             -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,1);
             color: #0000FF;
-            /*opacitffffffffy: .78;*/
+            /*opacity: .78;*/
             opacity: 90; 
         }
         .testing {

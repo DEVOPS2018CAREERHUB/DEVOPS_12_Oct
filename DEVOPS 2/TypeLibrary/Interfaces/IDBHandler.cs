@@ -20,6 +20,7 @@ namespace TypeLibrary.Interfaces
         bool BLL_DeleteStudent(DeleteStudent deleteStudent);
         bool BLL_DeleteEmployer(DeleteEmployer deleteEmployer);
         UspGetAllJobPostsByEmployer BLL_GetAllJobPostsByEmployer(int employerID);
+        UspGetAllJobPosts BLL_GetAllJobPosts(int employerID);
         UspGetAllJobPostsByQualification BLL_GetAllJobPostsByQualification(int qualID);
         UspGetAllJobPostsBySkill BLL_GetAllJobPostsBySkill(int skillID);
         UspGetAllJobPostsByType BLL_GetAllJobPostsByType(int typeID);

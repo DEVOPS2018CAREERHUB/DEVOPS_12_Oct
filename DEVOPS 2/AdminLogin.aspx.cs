@@ -31,7 +31,7 @@ namespace DEVOPS_2
             string adminUsername1 = txtAdminUsername.Text;
             string adminPassword1 = txtAdminPassword.Text;
             
-            if(adminUsername1 == "Ronel123" && adminPassword1 == "nmugrad")
+            if(adminUsername1 == sAdminUsername && adminPassword1 == sAdminPassword)
             {
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('You have logged in as admin');</script>");
                 Response.Redirect("AdminPage.aspx");

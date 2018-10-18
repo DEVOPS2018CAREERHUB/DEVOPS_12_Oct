@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Project_DevOps {
+namespace DEVOPS_2 {
     
     
-    public partial class StudentLogin2 {
+    public partial class ForgotPassword {
         
         /// <summary>
         /// form1 control.
@@ -22,75 +22,57 @@ namespace Project_DevOps {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// studPasswordtxt control.
+        /// lblForgotPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox studPasswordtxt;
+        protected global::System.Web.UI.WebControls.Label lblForgotPassword;
         
         /// <summary>
-        /// EmpBtn control.
+        /// txtUsename control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button EmpBtn;
+        protected global::System.Web.UI.WebControls.TextBox txtUsename;
         
         /// <summary>
-        /// studUsernametxt control.
+        /// txtEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox studUsernametxt;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
         
         /// <summary>
-        /// studLoginlbl control.
+        /// txtNewPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label studLoginlbl;
+        protected global::System.Web.UI.WebControls.TextBox txtNewPassword;
         
         /// <summary>
-        /// studPasswordlbl control.
+        /// txtComfirmPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label studPasswordlbl;
+        protected global::System.Web.UI.WebControls.TextBox txtComfirmPassword;
         
         /// <summary>
-        /// RegisterBtn control.
+        /// btnRestPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RegisterBtn;
-        
-        /// <summary>
-        /// studLoginBtn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button studLoginBtn;
-        
-        /// <summary>
-        /// errorLbl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label errorLbl;
+        protected global::System.Web.UI.WebControls.Button btnRestPassword;
     }
 }

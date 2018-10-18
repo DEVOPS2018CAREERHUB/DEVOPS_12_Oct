@@ -27,6 +27,7 @@ namespace TypeLibrary.Interfaces
         UspGetAllJobPostsByEmployer GetAllJobPostsByEmployer(int employerID);
         UspGetAllJobPostsByQualification GetAllJobPostsByQualification(int qualID);
         UspGetAllJobPostsBySkill GetAllJobPostsBySkill(int skillID);
+        UspGetAllJobPosts GetAllJobPosts(int employerID);
         UspGetAllJobPostsByType GetAllJobPostsByType(int typeID);
         UspGetAllStudentsByCity GetAllStudentsByCity(int cityID);
         UspGetAllStudentsByQualification GetAllStudentsByQualification(int qualID);

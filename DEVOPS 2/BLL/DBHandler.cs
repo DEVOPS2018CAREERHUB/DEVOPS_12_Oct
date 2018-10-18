@@ -86,6 +86,10 @@ namespace BLL
             return dBAccess.GetAllJobPostsByEmployer(employerID);
         }
 
+        public UspGetAllJobPosts BLL_GetAllJobPosts(int employerID)
+        {
+            return dBAccess.GetAllJobPosts(employerID);
+        }
         public UspGetAllJobPostsByQualification BLL_GetAllJobPostsByQualification(int qualID)
         {
             return dBAccess.GetAllJobPostsByQualification(qualID);
@@ -135,12 +139,12 @@ namespace BLL
         {
             return dBAccess.GetAllCities();
         }
-
+      
         public List<UspGetAllIndustries> BLL_GetAllIndustries()
         {
             return dBAccess.GetAllIndustries();
         }
-
+        
         public List<UspGetAllStudents> BLL_GetAllStudents()
         {
             return dBAccess.GetAllStudents();

@@ -18,8 +18,19 @@ namespace Project_DevOps
         DBHandler BLL_handler = new DBHandler();
         protected void Page_Load(object sender, EventArgs e)
         {
+            //DateTime dtClosing = Convert.ToDateTime(dateClosingtxt.Text);
+            //DateTime dtStarting = Convert.ToDateTime(startDatetxt.Text);
+
+            //TimeSpan dateTotatl = dtClosing - dtStarting;
+            //double noDays = dateTotatl.Days;
+            //if (noDays < 7)
+            //{
+            //    LblEmpName.Text = "invalid date";
+            //}
             if (!IsPostBack)
             {
+               // empUsernametxt.text = Request.QueryString[""];
+
                 countryDdl.DataSource = BLL_handler.BLL_GetAllCountries();
                 countryDdl.DataTextField = "CountryDescription";
                 countryDdl.DataValueField = "CountryID";
@@ -45,11 +56,6 @@ namespace Project_DevOps
                 skillDdl.DataValueField = "SkillID";
                 skillDdl.DataBind();
 
-                empDdl.DataSource = BLL_handler.BLL_GetAllEmployers();
-                empDdl.DataTextField = "employerName";
-                empDdl.DataValueField = "employer_ID";
-                empDdl.DataBind();
-
                 statusDdl.DataSource = BLL_handler.BLL_GetAllStatus();
                 statusDdl.DataTextField = "StatusDescription";
                 statusDdl.DataValueField = "StatusID";
@@ -74,7 +80,6 @@ namespace Project_DevOps
                 jobpost.typeID = Convert.ToInt32(typeDdl.SelectedItem.Value);
                 jobpost.duration = int.Parse(duarationtxt.Text);
                 jobpost.startDate = DateTime.Parse(startDatetxt.Text);
-                jobpost.employerID = Convert.ToInt32(empDdl.SelectedItem.Value);
                 jobpost.postedBy = postedBytxt.Text;
                 jobpost.statusID = Convert.ToInt32(statusDdl.SelectedItem.Value);
 
@@ -111,7 +116,7 @@ namespace Project_DevOps
                 jobpost.typeID = Convert.ToInt32(typeDdl.SelectedItem.Value);
                 jobpost.duration = int.Parse(duarationtxt.Text);
                 jobpost.startDate = DateTime.Parse(startDatetxt.Text);
-                jobpost.employerID = Convert.ToInt32(empDdl.SelectedItem.Value);
+                
                 jobpost.postedBy = postedBytxt.Text;
                 jobpost.statusID = Convert.ToInt32(statusDdl.SelectedItem.Value);
 
@@ -166,5 +171,11 @@ namespace Project_DevOps
         {
 
         }
+
+        protected void btnView_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ViewAddJob.aspx");
+        }
     }
+
 }

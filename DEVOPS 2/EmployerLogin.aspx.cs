@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using BLL;
 using DAL;
 using TypeLibrary.ViewModels;
+using System.Web.Security;
 
 
 namespace Project_DevOps
@@ -17,6 +18,7 @@ namespace Project_DevOps
         UspCheckEmployerLogin checkEmp = new UspCheckEmployerLogin();
         protected void Page_Load(object sender, EventArgs e)
         {
+
             string sEmpEmail = checkEmp.employerEmail;
             string sEmpPassword = checkEmp.employerPassword;
             errorLbl.Visible = false;
@@ -37,7 +39,14 @@ namespace Project_DevOps
             Response.Redirect("https://www.mandela.ac.za/");
         }
 
- 
+
+        //public string username
+        //{
+        //    get
+        //    { 
+        //        return empUsernametxt.Text;
+        //    }
+        //}
 
         protected void RegisterBtn_Click(object sender, EventArgs e)
         {
@@ -47,21 +56,32 @@ namespace Project_DevOps
         protected void empLoginBtn_Click(object sender, EventArgs e)
         {
 
-            string sEmpEmail = checkEmp.employerEmail;
-            string sEmpPassword = checkEmp.employerPassword;
-            string empEmail = empUsernametxt.Text;
-            string empPassword = empPasswordtxt.Text;
+            //string sEmpEmail = checkEmp.employerEmail;
+            //string sEmpPassword = checkEmp.employerPassword;
+            //string empEmail = empUsernametxt.Text;
+            //string empPassword = empPasswordtxt.Text;
 
-            if (empEmail == empUsernametxt.Text && empPassword == empPasswordtxt.Text)
-            {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('You have successfully Logged in');</script>");
-                Response.Redirect("AddJob.aspx");
-            }
-            else
-            {
-                errorLbl.Visible = true;
-            }
-            
+            //if (sEmpEmail == empEmail && sEmpPassword == empPassword)
+            //{
+            //    Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('You have successfully Logged in');</script>");
+            //    Response.Redirect("AddJob.aspx");
+            //}
+            //else
+            //{
+            //    errorLbl.Visible = true;
+            //}
+
+
+        }
+
+        protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        {
+
+        }
+
+        protected void LoginButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
