@@ -16,6 +16,7 @@ namespace Project_DevOps
     {
         DBHandler BLL_handler = new DBHandler();
         UspCheckEmployerLogin checkEmp = new UspCheckEmployerLogin();
+        
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -56,20 +57,20 @@ namespace Project_DevOps
         protected void empLoginBtn_Click(object sender, EventArgs e)
         {
 
-            //string sEmpEmail = checkEmp.employerEmail;
-            //string sEmpPassword = checkEmp.employerPassword;
-            //string empEmail = empUsernametxt.Text;
-            //string empPassword = empPasswordtxt.Text;
+            string sEmpEmail = checkEmp.employerEmail;
+            string sEmpPassword = checkEmp.employerPassword;
+            string empEmail = empUsernametxt.Text;
+            string empPassword = empPasswordtxt.Text;
 
-            //if (sEmpEmail == empEmail && sEmpPassword == empPassword)
-            //{
-            //    Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('You have successfully Logged in');</script>");
-            //    Response.Redirect("AddJob.aspx");
-            //}
-            //else
-            //{
-            //    errorLbl.Visible = true;
-            //}
+            if (empEmail == empUsernametxt.Text && empPassword == empPasswordtxt.Text)
+            {
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('You have successfully Logged in');</script>");
+                Response.Redirect("AddJob.aspx");
+            }
+            else
+            {
+                errorLbl.Visible = true;
+            }
 
 
         }
@@ -81,7 +82,20 @@ namespace Project_DevOps
 
         protected void LoginButton_Click(object sender, EventArgs e)
         {
+            //UspCheckEmployerLogin check = new UspCheckEmployerLogin();
+            //string sUN = Login1.UserName;
+            //string sPW = Login1.Password;
+            ////bool result = check(sUN, sPW);
+            //if (Login1.UserName == check.employerEmail && Login1.Password == check.employerPassword)
+            //{
+            //    Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('You have successfully Logged in');</script>");
+            //    Response.Redirect("AddJob.aspx");
+            //}
 
+            //else
+            //{
+            //    errorLbl.Text = "invalid";
+            //}
         }
     }
 }

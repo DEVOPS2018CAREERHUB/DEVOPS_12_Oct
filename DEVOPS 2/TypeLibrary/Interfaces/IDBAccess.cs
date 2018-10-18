@@ -27,13 +27,14 @@ namespace TypeLibrary.Interfaces
         UspGetAllJobPostsByEmployer GetAllJobPostsByEmployer(int employerID);
         UspGetAllJobPostsByQualification GetAllJobPostsByQualification(int qualID);
         UspGetAllJobPostsBySkill GetAllJobPostsBySkill(int skillID);
-        UspGetAllJobPosts GetAllJobPosts(int employerID);
+        //UspGetAllJobPosts GetAllJobPosts(int employerID);
         UspGetAllJobPostsByType GetAllJobPostsByType(int typeID);
         UspGetAllStudentsByCity GetAllStudentsByCity(int cityID);
         UspGetAllStudentsByQualification GetAllStudentsByQualification(int qualID);
         UspGetAllStudentsBySkill GetAllStudentsBySkill(int skillID);
         bool UpdateEmployerProfile(UpdateEmployerProfile updateemployerprofile);
         bool UpdateStudentProfile(UpdateStudentProfile updatestudentprofile);
+        ////List<UspGetAllJobPosts> GetAllJobPosts();
         List<UspGetAllCountries> GetAllCountries();
         List<UspGetAllCities> GetAllCities();
         List<UspGetAllStudents> GetAllStudents();

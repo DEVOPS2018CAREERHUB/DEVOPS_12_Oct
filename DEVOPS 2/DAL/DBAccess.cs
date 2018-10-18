@@ -404,40 +404,40 @@ namespace DAL
             }
             return sq;
         }
-        public UspGetAllJobPosts GetAllJobPosts(int employerID)
-        {
-            UspGetAllJobPosts jp = null;
-            SqlParameter[] param = new SqlParameter[]
-            {
-                new SqlParameter ("@employerID", employerID)
-            };
-            using (DataTable table = DBHelper.ParamSelect("uspGetAllJobPosts", CommandType.StoredProcedure, param))
-            {
-                if (table.Rows.Count == 1)
-                {
-                    DataRow row = table.Rows[0];
-                    jp = new UspGetAllJobPosts
-                    {
-                        JobID = Convert.ToInt32(row["JobID"]),
-                        DatePosted = Convert.ToDateTime(row["DatePosted"]),
-                        DateClosing = Convert.ToDateTime(row["DateClosing"]),
-                        CountryDescription = row["CountryDescription"].ToString(),
-                        CityDescription = row["CityDescription"].ToString(),
-                        JobDescription = row["JobDescription"].ToString(),
-                        KeyResponsebilities = row["KeyResponsebilities"].ToString(),
-                        QualificationDescription = row["QualificationDescription"].ToString(),
-                        SkillDescription = row["SkillDescription"].ToString(),
-                        TypeDescription = row["TypeDescription"].ToString(),
-                        Duration = Convert.ToInt32(row["Duration"]),
-                        StartDate = Convert.ToDateTime(row["StartDate"]),
-                        PostedBy = row["PostedBy"].ToString(),
-                        StatusDescription = row["StatusDescription"].ToString(),
+        //public UspGetAllJobPosts GetAllJobPosts(int employerID)
+        //{
+        //    UspGetAllJobPosts jp = null;
+        //    SqlParameter[] param = new SqlParameter[]
+        //    {
+        //        new SqlParameter ("@employerID", employerID)
+        //    };
+        //    using (DataTable table = DBHelper.ParamSelect("uspGetAllJobPosts", CommandType.StoredProcedure, param))
+        //    {
+        //        if (table.Rows.Count == 1)
+        //        {
+        //            DataRow row = table.Rows[0];
+        //            jp = new UspGetAllJobPosts
+        //            {
+        //                JobID = Convert.ToInt32(row["JobID"]),
+        //                DatePosted = Convert.ToDateTime(row["DatePosted"]),
+        //                DateClosing = Convert.ToDateTime(row["DateClosing"]),
+        //                CountryDescription = row["CountryDescription"].ToString(),
+        //                CityDescription = row["CityDescription"].ToString(),
+        //                JobDescription = row["JobDescription"].ToString(),
+        //                KeyResponsebilities = row["KeyResponsebilities"].ToString(),
+        //                QualificationDescription = row["QualificationDescription"].ToString(),
+        //                SkillDescription = row["SkillDescription"].ToString(),
+        //                TypeDescription = row["TypeDescription"].ToString(),
+        //                Duration = Convert.ToInt32(row["Duration"]),
+        //                StartDate = Convert.ToDateTime(row["StartDate"]),
+        //                PostedBy = row["PostedBy"].ToString(),
+        //                StatusDescription = row["StatusDescription"].ToString(),
 
-                    };
-                }
-            }
-            return jp;
-        }
+        //            };
+        //        }
+        //    }
+        //    return jp;
+        //}
 
         public UspGetAllStudentsBySkill GetAllStudentsBySkill(int skillID)
         {
@@ -823,6 +823,38 @@ namespace DAL
                 }
             }
             return qualification;
+        }
+        public List<UspGetAllJobPosts> GetAllJobPosts()
+        {
+            List<UspGetAllJobPosts> jobp = new List<UspGetAllJobPosts>();
+            using (DataTable table = DBHelper.Select("uspGetAllJobPosts", CommandType.StoredProcedure))
+            {
+                if (table.Rows.Count > 0)
+                {
+                    foreach (DataRow row in table.Rows)
+                    {
+                        UspGetAllJobPosts posts = new UspGetAllJobPosts
+                        {
+                            //employerID = Convert.ToInt32(row["EmployerID"]),
+                            JobID = Convert.ToInt32(row["JobID"]),
+                            DatePosted = Convert.ToDateTime(row["DatePosted"]),
+                            DateClosing = Convert.ToDateTime(row["DateClosing"]),
+                            CountryDescription = row["CountryDescription"].ToString(),
+                            CityDescription = row["CityDescription"].ToString(),
+                            JobDescription = row["JobDescription"].ToString(),
+                            KeyResponsibilities = row["KeyResponsibilities"].ToString(),
+                            QualificationDescription = row["QualificationDescription"].ToString(),
+                            SkillDescription = row["SkillDescription"].ToString(),
+                            TypeDescription = row["TypeDescription"].ToString(),
+                            Duration = Convert.ToInt32(row["Duration"]),
+                            StartDate = Convert.ToDateTime(row["StartDate"]),
+                            PostedBy = row["PostedBy"].ToString(),
+                            StatusDescription = row["StatusDescription"].ToString(),
+                        };
+                    }
+                }
+            }
+            return jobp;
         }
         public List<UspGetAllJobType> GetAllJobType()
         {
