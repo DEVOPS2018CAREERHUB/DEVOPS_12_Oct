@@ -34,6 +34,30 @@ namespace BLL
             return dBAccess.AddStudent(addStudent);
         }
 
+        public bool BLL_AddNewSkill(AddNewSkill addNewSkill)
+        {
+            return dBAccess.AddNewSkill(addNewSkill);
+        }
+
+        public bool BLL_AddNewQual(AddNewQual addNewQual)
+        {
+            return dBAccess.AddNewQual(addNewQual);
+        }
+
+        public bool BLL_AddStudentSkill(AddStudentSkill addStudentSkill)
+        {
+            return dBAccess.AddStudentSkill(addStudentSkill);
+        }
+
+        public bool BLL_AddNewIndustry(AddNewIndustry addNewIndustry)
+        {
+            return dBAccess.AddNewIndustry(addNewIndustry);
+        }
+
+        public bool BLL_AddStudentQual(AddStudentQual addStudentQual)
+        {
+            return dBAccess.AddStudentQual(addStudentQual);
+        }
         public bool BLL_DeleteJobPost(DeleteJobPost deleteJobPost)
         {
             return dBAccess.DeleteJobPost(deleteJobPost);

@@ -24,7 +24,8 @@
              background-color: #F0F0F0;
             -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,1);
             color: #0000FF;
-            opacity: .78; 
+            
+            opacity: 90; 
         }
         .testing {
             opacity: .78; 
@@ -39,7 +40,7 @@
     <script async="" src="Scripts/ga.js.download" type="text/javascript"></script>
 
 </head>
-<body style="background-image: url('images/create_Employer_profile.png'); width: 1600px; height: 900px; background-repeat:no-repeat;">
+<body style=" width: 1600px; height: 900px; background-repeat:no-repeat;">
     <form id="form1" runat="server" style="width: 1600px; height: 900px">
         <div class="container-fluid navbar-blue-gradient navbar-fixed-top tbsZindex">
             <div class="container" style="padding-left: 0px; height: 45px">
@@ -117,7 +118,9 @@
             </div>
         </div>
         <div style="background-image: url('/images/Landing.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-position: inherit bottom bottom;"></div>
-    <div class="shadow" style="z-index: 1; left: 116px; top: 151px; position: absolute; height: 100%; width: 100%;">
+
+
+    <div class="shadow" style="z-index: 1; left: 116px; top: 170px; position: absolute; height: 1300px; width: 1270px;">
     
         <asp:Label ID="lblStudentNo" runat="server" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 12px; top: 10px; position: absolute" Text="Student Number"></asp:Label>
         <asp:Label ID="lblFirstName" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 150px; z-index: 1; left: 12px; top: 45px; position: absolute" Text="First Name"></asp:Label>
@@ -128,14 +131,13 @@
         <asp:Label ID="lblEmail" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 150px; z-index: 1; left: 12px; top: 220px; position: absolute" Text="Email Address"></asp:Label>
         <asp:Label ID="lblContactNo" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 150px; z-index: 1; left: 12px; top: 255px; position: absolute" Text="Contact Number"></asp:Label>
         <asp:Label ID="lblIndustry" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 150px; z-index: 1; left: 12px; top: 290px; position: absolute" Text="Industry"></asp:Label>
-        <asp:Label ID="lblQual" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 150px; z-index: 1; left: 12px; top: 325px; position: absolute" Text="Qualifications"></asp:Label>
-        <asp:Label ID="lblSkill" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 150px; z-index: 1; left: 12px; top: 360px; position: absolute" Text="Skills"></asp:Label>
-        <asp:Label ID="lblDrivers" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 150px; z-index: 1; left: 12px; top: 395px; position: absolute" Text="Drivers License"></asp:Label>
-        <asp:Label ID="lblprofilepic" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 150px; z-index: 1; left: 12px; top: 430px; position: absolute" Text="Profile Picture"></asp:Label>
-        <asp:Label ID="lblStudUsername" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 180px; z-index: 1; left: 12px; top: 465px; position: absolute" Text="Student Username"></asp:Label>
-        <asp:Label ID="lblStudPassword" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 180px; z-index: 1; left: 12px; top: 500px; position: absolute" Text="Student Password"></asp:Label>
-        <asp:Label ID="lblCV" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 150px; z-index: 1; left: 12px; top: 535px; position: absolute" Text="CV"></asp:Label>
-        <asp:Label ID="lbllastUpdated" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 150px; z-index: 1; left: 12px; top: 570px; position: absolute" Text="Last Updated"></asp:Label>
+        <asp:Label ID="lblQual" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 150px; z-index: 1; left: 12px; top: 350px; position: absolute" Text="Qualifications"></asp:Label>
+        <asp:Label ID="lblSkill" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 150px; z-index: 1; left: 12px; top: 660px; position: absolute" Text="Skills"></asp:Label>
+        <asp:Label ID="lblDrivers" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 150px; z-index: 1; left: 12px; top: 975px; position: absolute" Text="Drivers License"></asp:Label>
+        <asp:Label ID="lblStudUsername" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 180px; z-index: 1; left: 12px; top: 1010px; position: absolute" Text="Student Username"></asp:Label>
+        <asp:Label ID="lblStudPassword" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 180px; z-index: 1; left: 12px; top: 1045px; position: absolute" Text="Student Password"></asp:Label>
+        <asp:Label ID="lblCV" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 150px; z-index: 1; left: 12px; top: 1080px; position: absolute" Text="CV"></asp:Label>
+        <asp:Label ID="lbllastUpdated" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 150px; z-index: 1; left: 12px; top: 1115px; position: absolute" Text="Last Updated"></asp:Label>
 
 
         <asp:TextBox ID="txtStudentNo" runat="server" BackColor="#F0F0F0" BorderWidth="2px" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 942px; top: 10px; position: absolute; width: 305px" TextMode="Number"></asp:TextBox>
@@ -148,29 +150,73 @@
         </asp:DropDownList>
         <asp:TextBox ID="txtEmail" runat="server" BackColor="#F0F0F0" BorderWidth="2px" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 942px; top: 220px; position: absolute; width: 305px"  ></asp:TextBox>
         <asp:TextBox ID="txtContactNo" runat="server" BackColor="#F0F0F0" BorderWidth="2px" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 942px; top: 255px; position: absolute; width: 305px" ></asp:TextBox>
-        <asp:DropDownList ID="ddlIndustry" runat="server" BackColor="#F0F0F0" BorderWidth="2px" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 942px; top: 290px; position: absolute; width: 305px" ></asp:DropDownList>
+        <asp:DropDownList ID="ddlIndustry" runat="server" BackColor="#F0F0F0" BorderWidth="2px" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 220px; top: 295px; position: absolute; width: 250px" AutoPostBack="True" OnSelectedIndexChanged="ddlIndustry_SelectedIndexChanged" ></asp:DropDownList>
+        <asp:Label ID="lblAddNewIndustry" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 182px; z-index: 1; left: 480px; top: 293px; position: absolute" Text="Or add a new Industry:"></asp:Label>
+        <asp:TextBox ID="txtAddNewIndustry" runat="server" BackColor="#F0F0F0" BorderWidth="2px" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 670px; top: 290px; position: absolute; width: 200px"  ></asp:TextBox>
+        <asp:Button ID="btnAddNewIndustry" runat="server" Font-Size="Large" ForeColor="White" style="z-index: 1; left: 900px; top: 290px; position: absolute" Text="Add" OnClick="btnAddNewIndustry_Click" />
+        <asp:TextBox ID="txtChosenIndustry" runat="server" BackColor="#F0F0F0" BorderWidth="2px" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 992px; top: 290px; position: absolute; width: 250px"  ></asp:TextBox>
+            <asp:TextBox ID="txtChosenIndID" runat="server" BackColor="#F0F0F0" BorderWidth="2px" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 676px; top: 230px; position: absolute; width: 91px" Enabled="False" Visible="False"  ></asp:TextBox>
         <asp:TextBox ID="txtQual" runat="server" BackColor="#F0F0F0" BorderWidth="2px" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 942px; top: 325px; position: absolute; width: 305px" ></asp:TextBox>
         <asp:TextBox ID="txtSkills" runat="server" BackColor="#F0F0F0" BorderWidth="2px" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 942px; top: 360px; position: absolute; width: 305px" ></asp:TextBox>
-        <asp:RadioButton GroupName="Drivers" ID="rbtnDriversYes" runat="server" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 942px; top: 395px; position: absolute; width: 152px" Text="Yes"/>
-        <asp:RadioButton GroupName="Drivers" ID="rbtnDriversNo" runat="server" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 1094px; top: 395px; position: absolute; width: 152px" Text="No"/>
+        <asp:RadioButton GroupName="Drivers" ID="rbtnDriversYes" runat="server" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 942px; top: 975px; position: absolute; width: 152px" Text="Yes"/>
+        <asp:RadioButton GroupName="Drivers" ID="rbtnDriversNo" runat="server" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 1094px; top: 975px; position: absolute; width: 152px" Text="No"/>
         
 <%--        <asp:Button ID="btnImageUpload" runat="server" Text="Choose image file" BackColor="#F0F0F0" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 942px; top: 420px; position: absolute; width: 152px" OnClick="btnImageUpload_Click"/>--%>
-        <asp:FileUpload ID="uploadImage" runat="server" BackColor="#F0F0F0" Font-Size="Large" ForeColor="#000099" style="left: 942px; position: absolute; width: 305px; top: 420px " />
-<%--        <asp:Label ID="lblImageChosen" runat="server" ForeColor="Red" Text="No Image chosen" Font-Size="Large" style="width: 150px; z-index: 1; left: 1100px; top: 430px; position: absolute"></asp:Label>--%>
+        <asp:FileUpload ID="uploadImage" runat="server" BackColor="#F0F0F0" Font-Size="Large" ForeColor="#000099" style="left: 509px; position: absolute; width: 64px; top: 436px; visibility:hidden" />
+        <%--        <asp:Label ID="lblImageChosen" runat="server" ForeColor="Red" Text="No Image chosen" Font-Size="Large" style="width: 150px; z-index: 1; left: 1100px; top: 430px; position: absolute"></asp:Label>--%>
         
-        <asp:TextBox ID="txtStudUsername" runat="server" BackColor="#F0F0F0" BorderWidth="2px" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 942px; top: 465px; position: absolute; width: 305px" ></asp:TextBox>
-        <asp:TextBox ID="txtStudPassword" runat="server" BackColor="#F0F0F0" BorderWidth="2px" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 942px; top: 500px; position: absolute; width: 305px" ></asp:TextBox>
+        <asp:TextBox ID="txtStudUsername" runat="server" BackColor="#F0F0F0" BorderWidth="2px" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 942px; top: 1010px; position: absolute; width: 305px" ></asp:TextBox>
+        <asp:TextBox ID="txtStudPassword" runat="server" BackColor="#F0F0F0" BorderWidth="2px" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 942px; top: 1045px; position: absolute; width: 305px" ></asp:TextBox>
 
       <%--  <asp:Button ID="btnCVUpload" runat="server" Text="Upload CV file" BackColor="#F0F0F0" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 942px; top: 535px; position: absolute; width: 152px"/>
         <asp:Label ID="lblCVUpload" runat="server" ForeColor="Red" Text="No CV Uploaded" Font-Size="Large" style="width: 150px; z-index: 1; left: 1100px; top: 535px; position: absolute"></asp:Label>
         --%>
-        <asp:FileUpload ID="uploadCV" runat="server" BackColor="#F0F0F0" Font-Size="Large" ForeColor="#000099" style="left: 942px; position: absolute; width: 305px; top: 535px " />
+        <asp:FileUpload ID="uploadCV" runat="server" BackColor="#F0F0F0" Font-Size="Large" ForeColor="#000099" style="left: 942px; position: absolute; width: 305px; top: 1080px " />
 
-        <asp:Label ID="lblLastUpdated2" runat="server" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 942px; top: 570px; position: absolute; width: 150px" Enabled="False" ></asp:Label>
+        <asp:Label ID="lblLastUpdated2" runat="server" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 942px; top: 1115px; position: absolute; width: 150px" Enabled="False" ></asp:Label>
 
 
-        <asp:Button ID="btnCreateSProfile" runat="server" Font-Size="Larger" ForeColor="#000099" style="z-index: 1; left: 636px; top: 591px; position: absolute" Text="Create Profile" OnClick="btnCreateSProfile_Click" />
+        <asp:Button ID="btnCreateSProfile" runat="server" Font-Size="Larger" ForeColor="White" style="z-index: 1; left: 636px; top: 1180px; position: absolute" Text="Create Profile" OnClick="btnCreateSProfile_Click" />
 
+
+<div style="border-width: 2px; border-style:solid; border-color: #000000; top: 650px; left: 220px; width: 660px; z-index: 1; position: absolute; height: 300px;">
+     <div style="border-width: 1px; overflow: scroll; height: 200px; width: 250px; top: 10px; left: 10px; z-index: 1; position: absolute;">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateSelectButton="True" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" >
+        </asp:GridView>
+    </div>
+
+        <asp:Button ID="btnClear" runat="server" Text="Clear Table" style="width:108px; position: absolute; top: 89px; left: 282px; " OnClick="btnClear_Click1"/>
+
+        <div style="border-width: 1px; overflow: scroll; height: 200px; width: 250px; top: 10px; right: 10px; z-index: 1; position: absolute;">
+        <asp:Table ID="tblSelectedSkills" runat="server" BorderWidth="1px" Enabled="false">
+        </asp:Table>
+        </div>
+
+        <asp:TextBox ID="txtNewSkill" runat="server" BackColor="#F0F0F0" BorderWidth="1px" Font-Size="Large" ForeColor="#000099" Style="width: 225px; position: absolute; top: 228px; left: 10px" ToolTip="Add a new Skill here if it is not in the list" ></asp:TextBox>
+        <asp:Button ID="btnAddNewSkill" runat="server" Text="Add new Skill" style="width:138px; position: absolute; top: 228px; left: 276px; " OnClick="btnAddNewSkill_Click"/>
+        <asp:Table ID="tblSkillIDs" runat="server" BorderWidth="1px" Enabled="false" Style="top: 228px; width: 180px; height: 50px; position:absolute; right: 10px; " >
+        </asp:Table>
+     
+</div>
+
+<div style="border-width: 2px; border-style:solid; border-color: #000000; top: 348px; left: 220px; width: 660px; z-index: 1; position: absolute; height: 300px;">
+    <div style="border-width: 1px; overflow: scroll; height: 200px; width: 250px; top: 10px; left: 10px; z-index: 1; position: absolute;">
+        <asp:GridView ID="gridQuals" runat="server" AutoGenerateSelectButton="True" OnSelectedIndexChanged="GridQuals_SelectedIndexChanged" >
+        </asp:GridView>
+    </div>
+
+        <asp:Button ID="btnClearQuals" runat="server" Text="Clear Table" style="width:108px; position: absolute; top: 89px; left: 282px; " OnClick="btnClearQuals_Click1"/>
+
+        <div style="border-width: 1px; overflow: scroll; height: 200px; width: 250px; top: 10px; right: 10px; z-index: 1; position: absolute;">
+        <asp:Table ID="tblSelectedQuals" runat="server" BorderWidth="1px" Enabled="false">
+        </asp:Table>
+        </div>
+
+        <asp:TextBox ID="txtNewQual" runat="server" BackColor="#F0F0F0" BorderWidth="1px" Font-Size="Large" ForeColor="#000099" Style="width: 225px; position: absolute; top: 228px; left: 10px" ToolTip="Add a new Qualification here if it is not in the list" ></asp:TextBox>
+        <asp:Button ID="btnAddNewQual" runat="server" Text="Add new Qualification" style="width:179px; position: absolute; top: 228px; left: 276px; " OnClick="btnAddNewQual_Click"/>
+        <asp:Table ID="tblQualIDs" runat="server" BorderWidth="1px" Enabled="false" Style="top: 228px; width: 180px; height: 50px; position:absolute; right: 10px; " >
+        </asp:Table>
+</div>
 
     </div>
     </form>

@@ -10,6 +10,11 @@ namespace TypeLibrary.Interfaces
         bool AddEmployer(AddEmployer addemployer);
         bool AddJobPost(AddJobPost addjobpost);
         bool AddStudent(AddStudent addstudent);
+        bool AddNewSkill(AddNewSkill addNewSkill);
+        bool AddNewQual(AddNewQual addNewQual);
+        bool AddNewIndustry(AddNewIndustry addNewIndustry);
+        bool AddStudentSkill(AddStudentSkill addStudentSkill);
+        bool AddStudentQual(AddStudentQual addStudentQual);
         UspCheckEmployerLogin CheckEmployerLogin(string employerEmail, string employerPassword);
         UspCheckStudentLogin CheckStudentLogin(int studentNo, string studentPassword);
         bool DeleteJobPost(DeleteJobPost deletejobpost);

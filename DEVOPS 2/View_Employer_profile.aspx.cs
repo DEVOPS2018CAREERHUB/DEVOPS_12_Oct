@@ -86,10 +86,11 @@ namespace DEVOPS_2
                 uep.employerUserName = txtUsername.Text;
                 
 
-                logo = uploadImage.PostedFile;
-                int profilepictureint = logo.ContentLength;
-                byte[] bytImg = new byte[profilepictureint];
-                uep.logo = bytImg;
+                //logo = uploadImage.PostedFile;
+                //int profilepictureint = logo.ContentLength;
+                //byte[] bytImg = new byte[profilepictureint];
+                //uep.logo = bytImg;
+                uep.logo = null;
 
                 uep.employerName = txtEmployerName.Text;
                 uep.statusID = 1;

@@ -37,8 +37,8 @@ namespace DEVOPS_2
                 string Cpassword = txt4.Text;
                 bool testEmail = emailIsValid(txt2.Text);
 
-                if (IsExistInAD(testNo) == true)                                                  
-                { //////// START OF AD TEST IF                                                    
+                //if (IsExistInAD(testNo) == true)                                                  AD1
+                //{ //////// START OF AD TEST IF                                                    AD2
                     if (password != Cpassword)
                     {
                         lblpasswords.Visible = true;
@@ -66,7 +66,7 @@ namespace DEVOPS_2
                         Response.Redirect("Create_Student_Profile.aspx?studentNumber=" + txt1.Text + "&Spassword=" + txt3.Text + "&Semail=" + txt2.Text);
 
                     }
-                }///////////////end of AD TEST IF                                             
+               // }///////////////end of AD TEST IF                                                 AD3
                 else                                                                          
                {                                                                                 
                     lblStudNoNotRegistered.Visible = true;                                           
