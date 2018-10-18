@@ -62,6 +62,10 @@ namespace BLL
             return dBAccess.GetAllJobPostsByEmployer(employerID);
         }
 
+        public UspGetAllJobPosts BLL_GetAllJobPosts(int employerID)
+        {
+            return dBAccess.GetAllJobPosts(employerID);
+        }
         public UspGetAllJobPostsByQualification BLL_GetAllJobPostsByQualification(int qualID)
         {
             return dBAccess.GetAllJobPostsByQualification(qualID);

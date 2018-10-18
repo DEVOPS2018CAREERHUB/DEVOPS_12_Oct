@@ -42,8 +42,17 @@
     <form id="form1" runat="server">
     <div style="background-image: url('images1/Addjob05.png'); background-repeat: no-repeat; height: 608px;">
     
-        <asp:GridView ID="GridViewAddJob" runat="server" BackColor="White">
+        
+    
+        <asp:DropDownList ID="DropDownList1" runat="server" style="z-index: 1; left: 277px; top: 100px; position: absolute" DataSourceID="SqlDataSource1" DataTextField="EmployerName" DataValueField="Employer_ID">
+        </asp:DropDownList>
+    
+        
+    
+        <asp:GridView ID="GridView1" runat="server">
         </asp:GridView>
+    
+        
     
     </div>
         <div class="container-fluid navbar-blue-gradient navbar-fixed-top tbsZindex">

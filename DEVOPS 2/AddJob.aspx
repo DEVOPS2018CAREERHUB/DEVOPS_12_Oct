@@ -99,6 +99,9 @@
 	
 		<br />
 		<asp:Label ID="LblEmpName" runat="server" ForeColor="Red" style="z-index: 1; left: 697px; top: 284px; position: absolute; height: 31px" Text="Label"></asp:Label>
+		<asp:Button ID="btnView" runat="server" BackColor="Yellow" ForeColor="Black" OnClick="btnView_Click" style="z-index: 1; left: 698px; top: 600px; position: absolute" Text="View" />
+	
+	    
 		
 	
 	</div>
@@ -143,7 +146,7 @@
 				</div>
 			</div>
 		</div>
-		<%--------------------------------------------------------------%>
+        <%--------------------------------------------------------------%>
 
 		<!-- LOGO & TRANSPARENT BACKGROUND -->
 

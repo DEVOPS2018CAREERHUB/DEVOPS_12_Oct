@@ -18,7 +18,15 @@ namespace Project_DevOps
         DBHandler BLL_handler = new DBHandler();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            //DateTime dtClosing = Convert.ToDateTime(dateClosingtxt.Text);
+            //DateTime dtStarting = Convert.ToDateTime(startDatetxt.Text);
+
+            //TimeSpan dateTotatl = dtClosing - dtStarting;
+            //double noDays = dateTotatl.Days;
+            //if (noDays < 7)
+            //{
+            //    LblEmpName.Text = "invalid date";
+            //}
             if (!IsPostBack)
             {
                // empUsernametxt.text = Request.QueryString[""];
@@ -163,5 +171,11 @@ namespace Project_DevOps
         {
 
         }
+
+        protected void btnView_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ViewAddJob.aspx");
+        }
     }
+
 }

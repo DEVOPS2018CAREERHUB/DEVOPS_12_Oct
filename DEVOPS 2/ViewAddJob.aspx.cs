@@ -15,8 +15,13 @@ namespace DEVOPS_2
         IDBHandler handler = new DBHandler();
         protected void Page_Load(object sender, EventArgs e)
         {
-            GridViewAddJob.DataSource = handler.BLL_GetAllStudents();
-            GridViewAddJob.DataBind();
+            //GridViewAddJob.DataSource = handler.BLL_GetAllJobPosts(employerID);
+            //GridViewAddJob.DataBind();
+        }
+
+        protected void GridViewAddJob_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

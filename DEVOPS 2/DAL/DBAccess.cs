@@ -338,6 +338,40 @@ namespace DAL
             }
             return sq;
         }
+        public UspGetAllJobPosts GetAllJobPosts(int employerID)
+        {
+            UspGetAllJobPosts jp = null;
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter ("@employerID", employerID)
+            };
+            using (DataTable table = DBHelper.ParamSelect("uspGetAllJobPosts", CommandType.StoredProcedure, param))
+            {
+                if (table.Rows.Count == 1)
+                {
+                    DataRow row = table.Rows[0];
+                    jp = new UspGetAllJobPosts
+                    {
+                        JobID = Convert.ToInt32(row["JobID"]),
+                        DatePosted = Convert.ToDateTime(row["DatePosted"]),
+                        DateClosing = Convert.ToDateTime(row["DateClosing"]),
+                        CountryDescription = row["CountryDescription"].ToString(),
+                        CityDescription = row["CityDescription"].ToString(),
+                        JobDescription = row["JobDescription"].ToString(),
+                        KeyResponsebilities = row["KeyResponsebilities"].ToString(),
+                        QualificationDescription = row["QualificationDescription"].ToString(),
+                        SkillDescription = row["SkillDescription"].ToString(),
+                        TypeDescription = row["TypeDescription"].ToString(),
+                        Duration = Convert.ToInt32(row["Duration"]),
+                        StartDate = Convert.ToDateTime(row["StartDate"]),
+                        PostedBy = row["PostedBy"].ToString(),
+                        StatusDescription = row["StatusDescription"].ToString(),
+
+                    };
+                }
+            }
+            return jp;
+        }
 
         public UspGetAllStudentsBySkill GetAllStudentsBySkill(int skillID)
         {

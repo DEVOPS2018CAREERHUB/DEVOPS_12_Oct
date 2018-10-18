@@ -41,14 +41,14 @@
     <form id="form1" runat="server">
     <div style="background-image: url('images1/EmpReg_0.jpg'); background-repeat: no-repeat; height: 620px; width: 1254px;">
     
-        <asp:TextBox ID="empPasswordtxt" runat="server" TextMode ="Password" style="z-index: 1; left: 709px; top: 294px; position: absolute; height: 26px; width: 271px"></asp:TextBox>
+        <%--<asp:TextBox ID="empPasswordtxt" runat="server" TextMode ="Password" style="z-index: 1; left: 709px; top: 294px; position: absolute; height: 26px; width: 271px"></asp:TextBox>--%>
     
-        6<asp:Button ID="studBtn" runat="server" style="z-index: 1; left: 679px; top: 170px; position: absolute; height: 127px; background-color : transparent; width: 30px; margin-left: 0px;" OnClick="studBtn_Click" />
+        <asp:Button ID="studBtn" runat="server" style="z-index: 1; left: 679px; top: 170px; position: absolute; height: 127px; background-color : transparent; width: 30px; margin-left: 0px;" OnClick="studBtn_Click" />
     
-        <asp:TextBox ID="empUsernametxt" runat="server" style="z-index: 1; left: 710px; top: 219px; position: absolute; height: 24px; width: 265px"></asp:TextBox>
+        <%--<asp:TextBox ID="empUsernametxt" runat="server" style="z-index: 1; left: 710px; top: 219px; position: absolute; height: 24px; width: 265px"></asp:TextBox>--%>
     
-        <asp:Label ID="empLoginlbl" runat="server" ForeColor="Yellow" style="z-index: 1; left: 714px; top: 190px; position: absolute; width: 269px; height: 24px; font-size: large; margin-top: 0px;" Text="Employer Email"></asp:Label>
-        <asp:Label ID="empPasswordlbl" runat="server" ForeColor="Yellow" style="z-index: 1; left: 712px; top: 264px; position: absolute; height: 24px; width: 251px; font-size: large" Text="Employer Password"></asp:Label>
+        <%--<asp:Label ID="empLoginlbl" runat="server" ForeColor="Yellow" style="z-index: 1; left: 714px; top: 190px; position: absolute; width: 269px; height: 24px; font-size: large; margin-top: 0px;" Text="Employer Email"></asp:Label>--%>
+        <%--<asp:Label ID="empPasswordlbl" runat="server" ForeColor="Yellow" style="z-index: 1; left: 712px; top: 264px; position: absolute; height: 24px; width: 251px; font-size: large" Text="Employer Password"></asp:Label>--%>
     
         <asp:Button ID="RegisterBtn" runat="server" BackColor="Yellow" OnClick="RegisterBtn_Click" style="z-index: 1; left: 715px; top: 397px; position: absolute; height: 37px; width: 80px; font-size: medium; right: 471px" Text="Register" />
         <asp:Button ID="empLoginBtn" runat="server" BackColor="Yellow" style="z-index: 1; left: 885px; top: 390px; position: absolute; height: 34px; width: 86px; font-size: medium; bottom: 161px; margin-top: 9px;" Text="Login" OnClick="empLoginBtn_Click" />
@@ -56,6 +56,56 @@
         <asp:Label ID="errorLbl" runat="server" ForeColor="#FF3300" style="z-index: 1; left: 717px; top: 337px; position: absolute; height: 26px; width: 262px; font-size: medium; font-weight: 700" Text="Incorrect Username or Password"></asp:Label>
     
         <asp:HyperLink ID="HypLinkForgot" runat="server"  style="top: 362px; font-weight: 700; visibility:visible"  >Forgot Password</asp:HyperLink>
+    
+        
+        <asp:Login ID="Login1" runat="server" >
+            <LayoutTemplate>
+                <table cellpadding="1" cellspacing="0" style="border-collapse:collapse;">
+                    <tr>
+                        <td>
+                            <table cellpadding="0">
+                                <tr>
+                                    <td align="center" colspan="2">Log In</td>
+                                </tr>
+                                <tr>
+                                    <td align="right">
+                                        <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">User Name:</asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="UserName" runat="server"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" ErrorMessage="User Name is required." ToolTip="User Name is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right">
+                                        <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Password:</asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ErrorMessage="Password is required." ToolTip="Password is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me next time." />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="center" colspan="2" style="color:Red;">
+                                        <asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td align="right" colspan="2">
+                                        <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Log In" ValidationGroup="Login1" OnClick="LoginButton_Click" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </LayoutTemplate>
+        </asp:Login>
     
     </div>
         <div class="container-fluid navbar-blue-gradient navbar-fixed-top tbsZindex">
@@ -127,7 +177,9 @@
                             </div>
                         </div>
                     </div>
-
+                    </div>
+                </div>
+            </div>
                     <div id="divSearchOnMobile" class="col-xs-4 hidden-md hidden-lg">
                     </div>
     </form>
