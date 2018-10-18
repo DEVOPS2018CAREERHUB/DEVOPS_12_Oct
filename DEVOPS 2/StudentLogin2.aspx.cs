@@ -50,11 +50,12 @@ namespace Project_DevOps
 
         protected void studLoginBtn_Click(object sender, EventArgs e)
         {
+            UspCheckStudentLogin checks = new UspCheckStudentLogin();
             int sStudentno = studLogin.studentNo;
             string sStudentPass = studLogin.studentPassword;
-            string studentNo = studUsernametxt.Text;
+            int studentNo = Convert.ToInt32(studUsernametxt.Text);
             string studentPassword = studPasswordtxt.Text;
-            if (studentNo == studUsernametxt.Text && studentPassword == studPasswordtxt.Text )
+            if(studentNo == Convert.ToInt32(studUsernametxt.Text) && studentPassword == studPasswordtxt.Text )
             {
                 Response.Redirect("Landing_Page.aspx");
             }

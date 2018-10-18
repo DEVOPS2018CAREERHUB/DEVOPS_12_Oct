@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewAddJob.aspx.cs" Inherits="DEVOPS_2.ViewAddJob" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewAddJob.aspx.cs" Inherits="DEVOPS_2.ViewAddJob" EnableViewState="true" %>
 
 <!DOCTYPE html>
 
@@ -40,18 +40,42 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div style="background-image: url('images1/Addjob05.png'); background-repeat: no-repeat; height: 608px;">
+    <div style=" background-repeat: no-repeat; height: 608px;">
     
         
     
-        <asp:DropDownList ID="DropDownList1" runat="server" style="z-index: 1; left: 277px; top: 100px; position: absolute" DataSourceID="SqlDataSource1" DataTextField="EmployerName" DataValueField="Employer_ID">
-        </asp:DropDownList>
+        
     
         
     
-        <asp:GridView ID="GridView1" runat="server">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DEVOPSconnection %>" SelectCommand="uspGetAllJobPosts" SelectCommandType="StoredProcedure">
+            <SelectParameters>
+                <asp:Parameter DefaultValue="" Name="employerID" Type="Int32" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    
+        
+    <div>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="JobID" DataSourceID="SqlDataSource1" ForeColor="Yellow" Style="position:absolute; z-index:1">
+            <Columns>
+                <asp:BoundField DataField="JobID" HeaderText="JobID" InsertVisible="False" ReadOnly="True" SortExpression="JobID" />
+                <asp:BoundField DataField="JobTitle" HeaderText="JobTitle" SortExpression="JobTitle" />
+                <asp:BoundField DataField="DatePosted" HeaderText="DatePosted" SortExpression="DatePosted" />
+                <asp:BoundField DataField="DateClosing" HeaderText="DateClosing" SortExpression="DateClosing" />
+                <asp:BoundField DataField="CountryDescription" HeaderText="CountryDescription" SortExpression="CountryDescription" />
+                <asp:BoundField DataField="CityDescription" HeaderText="CityDescription" SortExpression="CityDescription" />
+                <asp:BoundField DataField="JobDescription" HeaderText="JobDescription" SortExpression="JobDescription" />
+                <asp:BoundField DataField="KeyResponsibilities" HeaderText="KeyResponsibilities" SortExpression="KeyResponsibilities" />
+                <asp:BoundField DataField="QualificationDescription" HeaderText="QualificationDescription" SortExpression="QualificationDescription" />
+                <asp:BoundField DataField="SkillDescription" HeaderText="SkillDescription" SortExpression="SkillDescription" />
+                <asp:BoundField DataField="TypeDescription" HeaderText="TypeDescription" SortExpression="TypeDescription" />
+                <asp:BoundField DataField="Duration" HeaderText="Duration" SortExpression="Duration" />
+                <asp:BoundField DataField="StartDate" HeaderText="StartDate" SortExpression="StartDate" />
+                <asp:BoundField DataField="PostedBy" HeaderText="PostedBy" SortExpression="PostedBy" />
+                <asp:BoundField DataField="StatusDescription" HeaderText="StatusDescription" SortExpression="StatusDescription" />
+            </Columns>
         </asp:GridView>
-    
+    </div>
         
     
     </div>

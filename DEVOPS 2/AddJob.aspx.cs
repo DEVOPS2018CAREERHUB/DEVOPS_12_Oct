@@ -80,6 +80,7 @@ namespace Project_DevOps
                 jobpost.typeID = Convert.ToInt32(typeDdl.SelectedItem.Value);
                 jobpost.duration = int.Parse(duarationtxt.Text);
                 jobpost.startDate = DateTime.Parse(startDatetxt.Text);
+                jobpost.employerID = Convert.ToInt32("1");
                 jobpost.postedBy = postedBytxt.Text;
                 jobpost.statusID = Convert.ToInt32(statusDdl.SelectedItem.Value);
 
@@ -116,7 +117,7 @@ namespace Project_DevOps
                 jobpost.typeID = Convert.ToInt32(typeDdl.SelectedItem.Value);
                 jobpost.duration = int.Parse(duarationtxt.Text);
                 jobpost.startDate = DateTime.Parse(startDatetxt.Text);
-                
+                jobpost.employerID = Convert.ToInt32("1");
                 jobpost.postedBy = postedBytxt.Text;
                 jobpost.statusID = Convert.ToInt32(statusDdl.SelectedItem.Value);
 

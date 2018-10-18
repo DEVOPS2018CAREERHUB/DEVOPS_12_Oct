@@ -179,6 +179,7 @@
     <Content Include="Student_HomePage.aspx" />
     <Content Include="UpdateStudentProfile.aspx" />
     <Content Include="ViewAddJob.aspx" />
+    <Content Include="ViewAddJob2.aspx" />
     <Content Include="View_Employer_profile.aspx" />
     <Content Include="View_Student_Profile.aspx" />
     <Content Include="Web.config" />
@@ -343,6 +344,13 @@
     </Compile>
     <Compile Include="ViewAddJob.aspx.designer.cs">
       <DependentUpon>ViewAddJob.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAddJob2.aspx.cs">
+      <DependentUpon>ViewAddJob2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAddJob2.aspx.designer.cs">
+      <DependentUpon>ViewAddJob2.aspx</DependentUpon>
     </Compile>
     <Compile Include="View_Employer_profile.aspx.cs">
       <DependentUpon>View_Employer_profile.aspx</DependentUpon>

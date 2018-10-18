@@ -79,7 +79,7 @@
 		</asp:DropDownList>
 		<asp:DropDownList ID="typeDdl" runat="server" style="z-index: 1; left: 276px; top: 451px; position: absolute; width: 151px">
 		</asp:DropDownList>
-		<asp:TextBox ID="duarationtxt" runat="server" style="z-index: 1; left: 605px; top: 490px; position: absolute; height: 17px; width: 151px" ToolTip="Job duration in WEEKS"></asp:TextBox>
+		<asp:TextBox ID="duarationtxt" runat="server" style="z-index: 1; left: 605px; top: 490px; position: absolute; height: 23px; width: 151px" ToolTip="Job duration in WEEKS"></asp:TextBox>
 		<asp:CompareValidator ControlToValidate="duarationtxt" runat="server" ErrorMessage="Numbers only please" Operator="DataTypeCheck" Type="Integer" ></asp:CompareValidator>
 		<asp:TextBox ID="startDatetxt" runat="server" style="z-index: 1; left: 275px; top: 490px; position: absolute; width: 151px" TextMode="Date"></asp:TextBox>
 		<asp:TextBox ID="postedBytxt" runat="server" style="z-index: 1; left: 275px; top: 527px; position: absolute; width: 151px" ToolTip="Employee Name"></asp:TextBox>
@@ -93,8 +93,8 @@
 		<asp:Label ID="jobIDLbl" runat="server" ForeColor="Yellow" style="z-index: 1; left: 490px; top: 111px; position: absolute; width: 80px; font-size: large" Text="Job ID" Visible="False"></asp:Label>
 		<asp:RadioButton ID="addRBtn" runat="server" AutoPostBack="True" Checked="True" GroupName="but" OnCheckedChanged="addRBtn_CheckedChanged" style="z-index: 1; left: 533px; top: 154px; position: absolute" ToolTip="Select to Add new job" />
 		<asp:RadioButton ID="updateRBtn" runat="server" AutoPostBack="True" GroupName="but" OnCheckedChanged="updateRBtn_CheckedChanged" style="z-index: 1; left: 537px; top: 192px; position: absolute" ToolTip="Select to Update existing job" />
-		<asp:Button ID="AddBtn" runat="server" BackColor="Yellow" OnClick="AddBtn_Click" style="z-index: 1; left: 282px; top: 600px; position: absolute" Text="Add" />
-		<asp:Button ID="UpdateBtn" runat="server" BackColor="Yellow" OnClick="UpdateBtn_Click" style="z-index: 1; left: 277px; top: 600px; position: absolute" Text="Update" Visible="False" />
+		<asp:Button ID="AddBtn" runat="server" BackColor="Yellow" OnClick="AddBtn_Click" style="z-index: 1; left: 282px; top: 600px; position: absolute" Text="Add" ForeColor="Black" />
+		<asp:Button ID="UpdateBtn" runat="server" BackColor="Yellow" OnClick="UpdateBtn_Click" style="z-index: 1; left: 277px; top: 600px; position: absolute" Text="Update" Visible="False" ForeColor="Black" />
 		
 	
 		<br />

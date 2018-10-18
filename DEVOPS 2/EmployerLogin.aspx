@@ -41,14 +41,14 @@
     <form id="form1" runat="server">
     <div style="background-image: url('images1/EmpReg_0.jpg'); background-repeat: no-repeat; height: 620px; width: 1254px;">
     
-        <%--<asp:TextBox ID="empPasswordtxt" runat="server" TextMode ="Password" style="z-index: 1; left: 709px; top: 294px; position: absolute; height: 26px; width: 271px"></asp:TextBox>--%>
+        <asp:TextBox ID="empPasswordtxt" runat="server" TextMode ="Password" style="z-index: 1; left: 709px; top: 294px; position: absolute; height: 26px; width: 271px"></asp:TextBox>
     
         <asp:Button ID="studBtn" runat="server" style="z-index: 1; left: 679px; top: 170px; position: absolute; height: 127px; background-color : transparent; width: 30px; margin-left: 0px;" OnClick="studBtn_Click" />
     
-        <%--<asp:TextBox ID="empUsernametxt" runat="server" style="z-index: 1; left: 710px; top: 219px; position: absolute; height: 24px; width: 265px"></asp:TextBox>--%>
+        <asp:TextBox ID="empUsernametxt" runat="server" style="z-index: 1; left: 710px; top: 219px; position: absolute; height: 24px; width: 265px"></asp:TextBox>
     
-        <%--<asp:Label ID="empLoginlbl" runat="server" ForeColor="Yellow" style="z-index: 1; left: 714px; top: 190px; position: absolute; width: 269px; height: 24px; font-size: large; margin-top: 0px;" Text="Employer Email"></asp:Label>--%>
-        <%--<asp:Label ID="empPasswordlbl" runat="server" ForeColor="Yellow" style="z-index: 1; left: 712px; top: 264px; position: absolute; height: 24px; width: 251px; font-size: large" Text="Employer Password"></asp:Label>--%>
+        <asp:Label ID="empLoginlbl" runat="server" ForeColor="Yellow" style="z-index: 1; left: 714px; top: 190px; position: absolute; width: 269px; height: 24px; font-size: large; margin-top: 0px;" Text="Employer Email"></asp:Label>
+        <asp:Label ID="empPasswordlbl" runat="server" ForeColor="Yellow" style="z-index: 1; left: 712px; top: 264px; position: absolute; height: 24px; width: 251px; font-size: large" Text="Employer Password"></asp:Label>
     
         <asp:Button ID="RegisterBtn" runat="server" BackColor="Yellow" OnClick="RegisterBtn_Click" style="z-index: 1; left: 715px; top: 397px; position: absolute; height: 37px; width: 80px; font-size: medium; right: 471px" Text="Register" />
         <asp:Button ID="empLoginBtn" runat="server" BackColor="Yellow" style="z-index: 1; left: 885px; top: 390px; position: absolute; height: 34px; width: 86px; font-size: medium; bottom: 161px; margin-top: 9px;" Text="Login" OnClick="empLoginBtn_Click" />
@@ -58,21 +58,28 @@
         <asp:HyperLink ID="HypLinkForgot" runat="server"  style="top: 362px; font-weight: 700; visibility:visible"  >Forgot Password</asp:HyperLink>
     
         
-        <asp:Login ID="Login1" runat="server" >
+       <%-- <asp:Login ID="Login1" runat="server" ForeColor="#FFCC00" Width="301px"  >
             <LayoutTemplate>
-                <table cellpadding="1" cellspacing="0" style="border-collapse:collapse;">
+                <table cellpadding="1" cellspacing="0" style="border-collapse:collapse; z-index: 1; left: 706px; top: 151px; position: absolute; width: 268px;">
                     <tr>
                         <td>
                             <table cellpadding="0">
                                 <tr>
-                                    <td align="center" colspan="2">Log In</td>
+                                    <td align="center" colspan="2">
+                                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DEVOPSconnection %>" ProviderName="System.Data.SqlClient" SelectCommand="uspCheckEmployerLogin" SelectCommandType="StoredProcedure">
+                                            <SelectParameters>
+                                                <asp:ControlParameter ControlID="UserName" Name="employerEmail" PropertyName="Text" Type="String" />
+                                                <asp:ControlParameter ControlID="Password" Name="employerPassword" PropertyName="Text" Type="String" />
+                                            </SelectParameters>
+                                        </asp:SqlDataSource>
+                                        Log In</td>
                                 </tr>
                                 <tr>
                                     <td align="right">
-                                        <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">User Name:</asp:Label>
+                                        <asp:Label ID="UserNameLabel" runat="server" AssociatedControlID="UserName">Email:</asp:Label>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="UserName" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="UserName" runat="server" Width="174px"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="UserNameRequired" runat="server" ControlToValidate="UserName" ErrorMessage="User Name is required." ToolTip="User Name is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
                                     </td>
                                 </tr>
@@ -105,7 +112,7 @@
                     </tr>
                 </table>
             </LayoutTemplate>
-        </asp:Login>
+        </asp:Login>--%>
     
     </div>
         <div class="container-fluid navbar-blue-gradient navbar-fixed-top tbsZindex">
