@@ -33,7 +33,7 @@
     
 
 </head>
-<body style="background-image: url('images/create_Employer_profile.png'); width: 1600px; height: 900px; background-repeat:no-repeat;">
+<body style=" width: 1600px; height: 900px; background-repeat:no-repeat;">
     <form id="form1" runat="server" style="width: 1600px; height: 900px">
         <div class="container-fluid navbar-blue-gradient navbar-fixed-top tbsZindex">
             <div class="container" style="padding-left: 0px; height: 45px">
@@ -114,9 +114,12 @@
     <div class="shadow" style="z-index: 1; left: 116px; top: 151px; position: absolute; height: 1500px; width: 100%;">
     
         <asp:Label ID="Label1" runat="server" Font-Size="Larger" ForeColor="#000099" style="z-index: 1; left: 118px; top: 49px; position: absolute; height: 26px;" Text="Students"></asp:Label>
+        
+        <div style="border-width: 1px; overflow: scroll; height: 598px; width: 1563px; top: 173px; left: 12px; z-index: 1; position: absolute;">
         <asp:GridView ID="dgvStudents" runat="server" Font-Size="Medium" ForeColor="#000099" style="z-index: 1; left: 12px; top: 151px; position: absolute; height: 429px; width: 307px">
         </asp:GridView>
-    
+        </div>
+        
         <asp:Label ID="lblENterStudNotoDelete" runat="server" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 15px; top: 83px; position: absolute" Text="Enter student number to delete student:"></asp:Label>
         <asp:TextBox ID="txtStudentNoDelete" runat="server" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 335px; top: 80px; position: absolute; margin-top: 0px"></asp:TextBox>
         <asp:Button ID="btnDeleteStudent" runat="server" Font-Size="Large" ForeColor="#000099" OnClick="btnDeleteStudent_Click" style="z-index: 1; left: 335px; top: 114px; position: absolute" Text="Delete Student" />
