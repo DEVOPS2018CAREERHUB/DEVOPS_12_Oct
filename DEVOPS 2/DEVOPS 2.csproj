@@ -282,7 +282,12 @@
     <Compile Include="TypeLibrary\Interfaces\IDBHandler.cs" />
     <Compile Include="TypeLibrary\Models\AddEmployer.cs" />
     <Compile Include="TypeLibrary\Models\AddJobPost.cs" />
+    <Compile Include="TypeLibrary\Models\AddNewIndustry.cs" />
+    <Compile Include="TypeLibrary\Models\AddNewQual.cs" />
+    <Compile Include="TypeLibrary\Models\AddNewSkill.cs" />
     <Compile Include="TypeLibrary\Models\AddStudent.cs" />
+    <Compile Include="TypeLibrary\Models\AddStudentQual.cs" />
+    <Compile Include="TypeLibrary\Models\AddStudentSkill.cs" />
     <Compile Include="TypeLibrary\Models\DeleteEmployer.cs" />
     <Compile Include="TypeLibrary\Models\DeleteJobPost.cs" />
     <Compile Include="TypeLibrary\Models\DeleteStudent.cs" />
@@ -309,6 +314,7 @@
     <Compile Include="TypeLibrary\ViewModels\UspGetAllStudentsByCity.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetAllStudentsByQualification.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetAllStudentsBySkill.cs" />
+    <Compile Include="TypeLibrary\ViewModels\UspGetAllStudentsForAdmin.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetEmployerProfile.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetStudentProfile.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspSearchJobs.cs" />

@@ -52,6 +52,72 @@ namespace DAL
             return DBHelper.NonQuery("uspAddStudent", CommandType.StoredProcedure, parameters.ToArray());
         }
 
+        public bool AddNewSkill(AddNewSkill addNewSkill)
+        {
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            foreach (var prop in addNewSkill.GetType().GetProperties())
+            {
+                if (prop.GetValue(addNewSkill) != null)
+                {
+                    parameters.Add(new SqlParameter("@" + prop.Name.ToString(), prop.GetValue(addNewSkill)));
+                }
+            }
+            return DBHelper.NonQuery("uspAddNewSkill", CommandType.StoredProcedure, parameters.ToArray());
+         }
+
+        public bool AddNewQual(AddNewQual addNewQual)
+        {
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            foreach (var prop in addNewQual.GetType().GetProperties())
+            {
+                if (prop.GetValue(addNewQual) != null)
+                {
+                    parameters.Add(new SqlParameter("@" + prop.Name.ToString(), prop.GetValue(addNewQual)));
+                }
+            }
+            return DBHelper.NonQuery("uspAddNewQual", CommandType.StoredProcedure, parameters.ToArray());
+        }
+
+        public bool AddNewIndustry(AddNewIndustry addNewIndustry)
+        {
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            foreach (var prop in addNewIndustry.GetType().GetProperties())
+            {
+                if (prop.GetValue(addNewIndustry) != null)
+                {
+                    parameters.Add(new SqlParameter("@" + prop.Name.ToString(), prop.GetValue(addNewIndustry)));
+                }
+            }
+            return DBHelper.NonQuery("uspAddNewIndustry", CommandType.StoredProcedure, parameters.ToArray());
+        }
+
+        public bool AddStudentSkill(AddStudentSkill addStudentSkill)
+        {
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            foreach (var prop in addStudentSkill.GetType().GetProperties())
+            {
+                if (prop.GetValue(addStudentSkill) != null)
+                {
+                    parameters.Add(new SqlParameter("@" + prop.Name.ToString(), prop.GetValue(addStudentSkill)));
+                }
+            }
+            return DBHelper.NonQuery("uspAddStudentSkill", CommandType.StoredProcedure, parameters.ToArray());
+
+        }
+
+        public bool AddStudentQual(AddStudentQual addStudentQual)
+        {
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            foreach (var prop in addStudentQual.GetType().GetProperties())
+            {
+                if (prop.GetValue(addStudentQual) != null)
+                {
+                    parameters.Add(new SqlParameter("@" + prop.Name.ToString(), prop.GetValue(addStudentQual)));
+                }
+            }
+            return DBHelper.NonQuery("uspAddStudentQual", CommandType.StoredProcedure, parameters.ToArray());
+        }
+
         public bool DeleteJobPost(DeleteJobPost deletejobpost)
         {
             List<SqlParameter> parameters = new List<SqlParameter>();
