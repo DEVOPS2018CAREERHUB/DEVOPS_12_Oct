@@ -120,8 +120,8 @@ namespace DEVOPS_2
             AddStudent addStudent = new AddStudent();
             AddStudentSkill addStudentSkill = new AddStudentSkill();
             AddStudentQual addStudentQual = new AddStudentQual();
-            
-            //HttpPostedFile profilePicture1;
+            string pathhh = "";
+            HttpPostedFile profilePicture1;
             //HttpPostedFile cv1;
 
 
@@ -145,10 +145,11 @@ namespace DEVOPS_2
                 //int s = o = tblSkillIDs.Rows[i];
                 addStudentSkill.studentNo = int.Parse(txtStudentNo.Text);
                 addStudentSkill.skillID = o;
-                    BLL_handler.BLL_AddStudentSkill(addStudentSkill);
+                    //BLL_handler.BLL_AddStudentSkill(addStudentSkill);
                     //ddlskillssss.Items.Add(o.ToString());    for testing purposes
                     //ggg
                 }
+                BLL_handler.BLL_AddStudentSkill(addStudentSkill);
             }
 
             foreach(TableRow s in tblQualIDs.Rows)
@@ -161,24 +162,36 @@ namespace DEVOPS_2
                     BLL_handler.BLL_AddStudentQual(addStudentQual);
                 }
             }
-            
-            
 
 
 
 
-
+            if (uploadCV.HasFile)
+            {
+                
+               
+                    string f1 = Path.GetFileNameWithoutExtension(uploadCV.FileName);
+                    string f2 = Path.GetExtension(uploadCV.FileName);
+                    f1 = txtStudentNo.Text;
+                    pathhh = "CV/" + f1;
+                    uploadCV.PostedFile.SaveAs(Server.MapPath("CV/" + f1 + f2));
+                    //uploadCV.SaveAs(Server.MapPath("CV\\" + uploadCV.FileName));
+                    //Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('yes');</script>");
+               
+            }
 
             try
             {
                 addStudent.studentNo = int.Parse(txtStudentNo.Text);
+                //addStudent.studentNo = 215333608;
                 addStudent.studentFirstName = txtFisrtName.Text;
                 addStudent.studentLastName = txtLastName.Text;
                 addStudent.studentDateOfBirth = DateTime.Parse(txtDateofBirth.Text);
-
+                
                 addStudent.countryID = Convert.ToInt32(ddlCountries.SelectedItem.Value);
                 addStudent.cityID = Convert.ToInt32(ddlCities.SelectedItem.Value);
                 addStudent.studentEmail = txtEmail.Text;
+                //addStudent.studentEmail = "sdsdsd@dsf.f";
                 addStudent.studentContactNo = txtContactNo.Text;
                 //addStudent.industryID = Convert.ToInt32(ddlIndustry.SelectedItem.Value);
                 addStudent.industryID = Convert.ToInt32(txtChosenIndID.Text);
@@ -198,31 +211,18 @@ namespace DEVOPS_2
                                                                             ///end image add
 
 
-                // profilePicture1 = uploadImage.PostedFile;
-                //int profilepictureint = profilePicture1.ContentLength;
-                //byte[] bytImg = new byte[profilepictureint];
-                addStudent.profilePicture = null;
+                 profilePicture1 = uploadImage.PostedFile;
+                int profilepictureint = profilePicture1.ContentLength;
+                byte[] bytImg = new byte[profilepictureint];
+                addStudent.profilePicture = bytImg;
                 addStudent.studentUsername = txtStudUsername.Text;
                 addStudent.studentPassword = txtStudPassword.Text;
+                //addStudent.studentPassword = "123";
 
-                                                                                                    //            CV
+                //            CV
                 // cv1 = uploadCV.PostedFile;
-                
 
-                if (uploadCV.HasFile)
-                {
-                    try
-                    {
-                        string fileName = Path.GetFileName(uploadCV.FileName);
-                        uploadCV.SaveAs(Server.MapPath("~/") + fileName);
-                        //addStudent.cv = Convert.ToByte(uploadCV);
-                    }
-                    catch(Exception ec)
-                    {
-
-                    }
-                }
-                addStudent.cv = null;
+                addStudent.cv = pathhh;
 
                 addStudent.cvDate = DateTime.Now;
                 addStudent.statusID = 1;
@@ -238,20 +238,21 @@ namespace DEVOPS_2
                 BLL_handler.BLL_AddStudent(addStudent);
                 
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('You have successfully created your profile');</script>");
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('There was a problem with creating your profile. Please retype all the fields');</script>");
                 txtStudentNo.Text = "";
                 txtFisrtName.Text = "";
                 txtLastName.Text = "";
                 txtDateofBirth.Text = "";
-                                            /////////////////////////////////add city
+                /////////////////////////////////add city
                 txtEmail.Text = "";
                 txtContactNo.Text = "";
                 txtStudUsername.Text = "";
                 txtStudPassword.Text = "";
             }
-            //Response.Redirect("View_Student_Profile.aspx?studentNumber=" + txtStudentNo.Text);
+            Response.Redirect("View_Student_Profile.aspx?studentNumber=" + txtStudentNo.Text);
 
         }
 

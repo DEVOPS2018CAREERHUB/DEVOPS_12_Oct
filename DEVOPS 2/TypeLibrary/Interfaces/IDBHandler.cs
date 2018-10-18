@@ -18,6 +18,7 @@ namespace TypeLibrary.Interfaces
         UspCheckStudentLogin BLL_CheckStudentLogin(int studentNo, string studentPassword);
         bool BLL_DeleteJobPost(DeleteJobPost deleteJobPost);
         bool BLL_DeleteStudent(DeleteStudent deleteStudent);
+        bool BLL_DeleteStudentSkill(DeleteStudentSkill deleteStudentSkill);
         bool BLL_DeleteEmployer(DeleteEmployer deleteEmployer);
         UspGetAllJobPostsByEmployer BLL_GetAllJobPostsByEmployer(int employerID);
         UspGetAllJobPosts BLL_GetAllJobPosts(int employerID);

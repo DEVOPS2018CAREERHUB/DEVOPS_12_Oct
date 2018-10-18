@@ -25,12 +25,15 @@ namespace DEVOPS_2
         {
             DeleteStudent ds = new DeleteStudent();
             DeleteEmployer de = new DeleteEmployer();
+            DeleteStudentSkill dss = new DeleteStudentSkill();
 
             if (Label1.Text == "Students")
             {
                 btnDeleteStudent.Text = "Delete Student";
                 int studentNo = int.Parse(txtStudentNoDelete.Text);
                 ds.studentNumber = int.Parse(txtStudentNoDelete.Text);
+                dss.studentNumber = int.Parse(txtStudentNoDelete.Text);
+                handler.BLL_DeleteStudentSkill(dss);
                 handler.BLL_DeleteStudent(ds);
                 dgvStudents.DataSource = handler.BLL_GetAllStudents();
                 dgvStudents.DataBind();
@@ -40,8 +43,8 @@ namespace DEVOPS_2
             else if(Label1.Text == "Employers")
             {
                 btnDeleteStudent.Text = "Delete Employer";
-                int employerID = int.Parse(txtStudentNoDelete.Text);
-                de.employerID = int.Parse(txtStudentNoDelete.Text);
+                //int employerID = int.Parse(txtStudentNoDelete.Text);
+                de.employerName = txtStudentNoDelete.Text;
                 handler.BLL_DeleteEmployer(de);
                 dgvStudents.DataSource = handler.BLL_GetAllEmployers();
                 dgvStudents.DataBind();
@@ -70,8 +73,8 @@ namespace DEVOPS_2
             dgvStudents.DataSource = handler.BLL_GetAllEmployers();
             dgvStudents.DataBind();
             Label1.Text = "Employers";
-            lblENterStudNotoDelete.Text = "Enter Employer ID to delete employer:";
-            txtStudentNoDelete.TextMode = TextBoxMode.Number;
+            lblENterStudNotoDelete.Text = "Enter Employer name to delete employer:";
+            txtStudentNoDelete.TextMode = TextBoxMode.SingleLine;
         }
     }
 }

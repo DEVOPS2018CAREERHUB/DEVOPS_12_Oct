@@ -23,7 +23,7 @@ namespace TypeLibrary.Models
         public byte[] profilePicture { get; set; }
         public string studentUsername { get; set; }
         public string studentPassword { get; set; }
-        public byte[] cv { get; set; }
+        public string cv { get; set; }
         public DateTime cvDate { get; set; }
         public int statusID { get; set; }
         public DateTime lastUpdate { get; set; }

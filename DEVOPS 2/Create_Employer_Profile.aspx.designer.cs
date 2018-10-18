@@ -85,6 +85,51 @@ namespace DEVOPS_2 {
         protected global::System.Web.UI.WebControls.Label lblIndustry;
         
         /// <summary>
+        /// ddlEmployerIndustry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlEmployerIndustry;
+        
+        /// <summary>
+        /// lblAddNewIndustry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAddNewIndustry;
+        
+        /// <summary>
+        /// txtAddNewIndustry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAddNewIndustry;
+        
+        /// <summary>
+        /// btnAddNewIndustry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddNewIndustry;
+        
+        /// <summary>
+        /// txtChosenIndID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtChosenIndID;
+        
+        /// <summary>
         /// lblLogo control.
         /// </summary>
         /// <remarks>
@@ -184,13 +229,13 @@ namespace DEVOPS_2 {
         protected global::System.Web.UI.WebControls.TextBox txtVAT;
         
         /// <summary>
-        /// ddlIndustry control.
+        /// txtChosenIndustry control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlIndustry;
+        protected global::System.Web.UI.WebControls.TextBox txtChosenIndustry;
         
         /// <summary>
         /// uploadLogo control.

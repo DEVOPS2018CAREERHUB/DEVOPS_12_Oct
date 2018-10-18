@@ -5,9 +5,9 @@ using System.Web;
 
 namespace TypeLibrary.Models
 {
-    public class DeleteEmployer
+    public class DeleteStudentSkill
     {
-        //public int employerID { get; set; }
-        public string employerName { get; set; }
+        public int studentNumber { get; set; }
     }
+
 }

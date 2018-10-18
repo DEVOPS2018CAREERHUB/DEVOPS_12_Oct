@@ -300,6 +300,7 @@
     <Compile Include="TypeLibrary\Models\DeleteEmployer.cs" />
     <Compile Include="TypeLibrary\Models\DeleteJobPost.cs" />
     <Compile Include="TypeLibrary\Models\DeleteStudent.cs" />
+    <Compile Include="TypeLibrary\Models\DeleteStudentSkill.cs" />
     <Compile Include="TypeLibrary\Models\UpdateEmployerProfile.cs" />
     <Compile Include="TypeLibrary\Models\UpdateJobPost.cs" />
     <Compile Include="TypeLibrary\Models\UpdateStudentProfile.cs" />
@@ -359,7 +360,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="NewFolder1\" />
+    <Folder Include="CV\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

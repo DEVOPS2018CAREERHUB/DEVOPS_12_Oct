@@ -23,7 +23,7 @@
              background-color: #F0F0F0;
             -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,1);
             color: #0000FF;
-            opacity: .78; 
+            opacity: 90; 
         }
 
     </style>
@@ -111,12 +111,12 @@
             </div>
         </div>
         <div style="background-image: url('/images/Landing.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-position: inherit bottom bottom;"></div>
-    <div class="shadow" style="z-index: 1; left: 116px; top: 151px; position: absolute; height: 1500px; width: 100%;">
+    <div class="shadow" style="z-index: 1; left: 116px; top: 151px; position: absolute; height: 1000px; width: 1300px;">
     
         <asp:Label ID="Label1" runat="server" Font-Size="Larger" ForeColor="#000099" style="z-index: 1; left: 118px; top: 49px; position: absolute; height: 26px;" Text="Students"></asp:Label>
         
-        <div style="border-width: 1px; overflow: scroll; height: 598px; width: 1563px; top: 173px; left: 12px; z-index: 1; position: absolute;">
-        <asp:GridView ID="dgvStudents" runat="server" Font-Size="Medium" ForeColor="#000099" style="z-index: 1; left: 12px; top: 151px; position: absolute; height: 429px; width: 307px">
+        <div style="border-width: 1px; overflow: scroll; height: 598px; width: 1280px; top: 173px; left: 12px; z-index: 1; position: absolute;">
+        <asp:GridView ID="dgvStudents" runat="server" Font-Size="Medium" ForeColor="#000099" style="z-index: 1; left: 12px; top: 51px; position: absolute; height: 429px; width: 307px">
         </asp:GridView>
         </div>
         

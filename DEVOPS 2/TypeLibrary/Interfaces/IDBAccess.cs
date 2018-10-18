@@ -19,6 +19,7 @@ namespace TypeLibrary.Interfaces
         UspCheckStudentLogin CheckStudentLogin(int studentNo, string studentPassword);
         bool DeleteJobPost(DeleteJobPost deletejobpost);
         bool DeleteStudent(DeleteStudent deleteStudent);
+        bool DeleteStudentSkill(DeleteStudentSkill deleteStudentSkill);
         bool DeleteEmployer(DeleteEmployer deleteEmployer);
         List<UspGetAllQualifications> GetAllQualifications();
         List<UspGetAllJobType> GetAllJobType();

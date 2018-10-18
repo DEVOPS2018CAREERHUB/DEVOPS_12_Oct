@@ -24,7 +24,7 @@
              background-color: #F0F0F0;
             -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,1);
             color: #0000FF;
-            opacity: .78; 
+            opacity: 90; 
         }
         #form1 {
             height: 177px;
@@ -37,7 +37,7 @@
     
 
 </head>
-<body style="background-image: url('images/create_Employer_profile.png'); width: 1600px; height: 900px; background-repeat:no-repeat;">
+<body style=" width: 1600px; height: 900px; background-repeat:no-repeat;">
     <form id="form1" runat="server" style="width: 1600px; height: 900px">
         <div class="container-fluid navbar-blue-gradient navbar-fixed-top tbsZindex">
             <div class="container" style="padding-left: 0px; height: 45px">
@@ -114,10 +114,10 @@
                 </div>
             </div>
         </div>
-        <div style="background-image: url('/images/Landing.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-position: inherit bottom bottom;"></div>
-    <div class="shadow" style="z-index: 1; left: 116px; top: 151px; position: absolute; height: 136%; width: 1169px;">
+        <div style=" background-repeat: no-repeat; background-attachment: fixed; background-position: inherit bottom bottom;"></div>
+    <div class="shadow" style="z-index: 1; left: 116px; top: 170px; position: absolute; height: 136%; width: 1169px;">
 
-            <asp:Image ID="Image1" runat="server" style="width: 150px; height: 150px; position: absolute; top: 17px; left: 556px;"/>
+            <asp:Image ID="Image1" runat="server" style="width: 150px; height: 150px; position: absolute; top: 17px; left: 556px;" Visible="False"/>
 
             <asp:Label ID="Label1" runat="server" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 24px; top: 150px; position: absolute" Text="Student Number"></asp:Label>
             <asp:Label ID="Label2" runat="server" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 24px; top: 185px; position: absolute" Text="First Name"></asp:Label>

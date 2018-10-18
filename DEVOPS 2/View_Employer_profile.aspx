@@ -35,7 +35,7 @@
     
 
 </head>
-<body style="background-image: url('images/create_Employer_profile.png'); width: 1600px; height: 900px; background-repeat:no-repeat;">
+<body style=" width: 1600px; height: 900px; background-repeat:no-repeat;">
     <form id="form1" runat="server" style="width: 1600px; height: 900px">
         <div class="container-fluid navbar-blue-gradient navbar-fixed-top tbsZindex">
             <div class="container" style="padding-left: 0px; height: 45px">
@@ -114,11 +114,11 @@
             </div>
         </div>
         <div style="background-image: url('/images/Landing.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-position: inherit bottom bottom;"></div>
-    <div class="shadow" style="z-index: 1; left: 116px; top: 151px; position: absolute; height: 100%; width: 100%;">
+    <div class="shadow" style="z-index: 1; left: 116px; top: 160px; position: absolute; height: 100%; width: 1500px;">
         
 
-
-        <asp:Image ID="Image1" runat="server" style=" Width: 100px; height: 100px; z-index: 1; left: 500px; top: 39px; position: absolute;"/>
+        <asp:Label ID="lblMyProfile" runat="server" Font-Size="XX-Large" ForeColor="Red" style="z-index: 1; left: 450px; top: 63px; position: absolute" Text="My Profile"></asp:Label>
+        <asp:Image ID="Image1" runat="server" style=" Width: 100px; height: 100px; z-index: 1; left: 126px; top: 39px; position: absolute;" EnableTheming="False" Visible="False"/>
         <asp:Label ID="lblEmployerName" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 200px; z-index: 1; left: 12px; top: 165px; position: absolute" Text="Employer Name"></asp:Label>
         <asp:Label ID="lblDescription" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 200px; z-index: 1; left: 12px; top: 200px; position: absolute" Text="Description"></asp:Label>
         <asp:Label ID="lblCountry" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 200px; z-index: 1; left: 12px; top: 235px; position: absolute" Text="Country"></asp:Label>
@@ -126,7 +126,7 @@
         <asp:Label ID="lblEmail" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 200px; z-index: 1; left: 12px; top: 305px; position: absolute" Text="Email Address"></asp:Label>
         <asp:Label ID="lblVAT" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 200px; z-index: 1; left: 12px; top: 340px; position: absolute" Text="VAT number"></asp:Label>
         <asp:Label ID="lblIndustry" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 200px; z-index: 1; left: 12px; top: 375px; position: absolute" Text="Industry"></asp:Label>
-        <asp:Label ID="lblLogo" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 200px; z-index: 1; left: 12px; top: 410px; position: absolute" Text="Employer Logo"></asp:Label>
+        <asp:Label ID="lblLogo" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 200px; z-index: 1; left: 12px; top: 410px; position: absolute" Text="Employer Logo" Visible="False"></asp:Label>
         <asp:Label ID="lblUsername" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 200px; z-index: 1; left: 12px; top: 445px; position: absolute" Text="Employer Username"></asp:Label>
         <asp:Label ID="lblPassword" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 200px; z-index: 1; left: 12px; top: 480px; position: absolute" Text="Employer password"></asp:Label>
         <asp:Label ID="lblContactPerson" runat="server" Font-Size="Large" ForeColor="#000099" style="width: 200px; z-index: 1; left: 12px; top: 515px; position: absolute" Text="Contact Person"></asp:Label>
@@ -144,7 +144,7 @@
         <asp:DropDownList ID="ddlIndustry" runat="server" BackColor="#F0F0F0" BorderWidth="2px" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 942px; top: 375px; position: absolute; width: 305px"></asp:DropDownList>
             <asp:TextBox ID="txtIndustry" runat="server" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 942px; top: 375px; position: absolute; width: 300px"></asp:TextBox>
 
-        <asp:FileUpload ID="uploadLogo" runat="server" BackColor="#F0F0F0" Font-Size="Large" ForeColor="#000099" style="left: 942px; position: absolute; width: 305px; top: 410px " />
+        <asp:FileUpload ID="uploadLogo" runat="server" BackColor="#F0F0F0" Font-Size="Large" ForeColor="#000099" style="left: 942px; position: absolute; width: 305px; top: 410px " Enabled="False" Visible="False" />
 
         <asp:TextBox ID="txtUsername" runat="server" BackColor="#F0F0F0" BorderWidth="2px" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 942px; top: 445px; position: absolute; width: 305px"></asp:TextBox>
         <asp:TextBox ID="txtPassword" runat="server" BackColor="#F0F0F0" BorderWidth="2px" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 942px; top: 480px; position: absolute; width: 305px"></asp:TextBox>
@@ -155,7 +155,7 @@
         <asp:Button ID="btnUpdateEmployerProfile" runat="server" Font-Size="Large" ForeColor="#000099" OnClick="btnUpdateEmployerProfile_Click" style="z-index: 1; left: 942px; top: 590px; position: absolute" Text="Update Employer Profile" />
         <asp:Button ID="btnFinalUpdate" runat="server" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 942px; top: 625px; position: absolute" Text="Update Profile" OnClick="btnFinalUpdate_Click" Visible="False" />
 
-        <asp:FileUpload ID="uploadImage" runat="server" />
+        <asp:FileUpload ID="uploadImage" runat="server" Enabled="False" Visible="False" />
 
     </div>
     </form>

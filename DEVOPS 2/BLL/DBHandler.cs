@@ -67,6 +67,11 @@ namespace BLL
             return dBAccess.DeleteStudent(deleteStudent);
         }
 
+        public bool BLL_DeleteStudentSkill(DeleteStudentSkill deleteStudentSkill)
+        {
+            return dBAccess.DeleteStudentSkill(deleteStudentSkill);
+        }
+
         public bool BLL_DeleteEmployer(DeleteEmployer deleteEmployer)
         {
             return dBAccess.DeleteEmployer(deleteEmployer);

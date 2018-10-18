@@ -144,6 +144,19 @@ namespace DAL
             return DBHelper.NonQuery("uspDeleteStudent", CommandType.StoredProcedure, params1.ToArray());
         }
 
+        public bool DeleteStudentSkill(DeleteStudentSkill deleteStudentSkill)
+        {
+            List<SqlParameter> params1 = new List<SqlParameter>();
+            foreach (var prop in deleteStudentSkill.GetType().GetProperties())
+            {
+                if (prop.GetValue(deleteStudentSkill) != null)
+                {
+                    params1.Add(new SqlParameter("@" + prop.Name.ToString(), prop.GetValue(deleteStudentSkill)));
+                }
+            }
+            return DBHelper.NonQuery("uspDeleteStudentSkill", CommandType.StoredProcedure, params1.ToArray());
+        }
+
         public bool DeleteEmployer(DeleteEmployer deleteEmployer)
         {
             List<SqlParameter> params1 = new List<SqlParameter>();
@@ -562,19 +575,19 @@ namespace DAL
                             firstName = row["StudentFirstName"].ToString(),
                             lastName = row["StudentLastName"].ToString(),
                             studentDateOfBirth = Convert.ToDateTime(row["StudentDateofBirth"]),
-                            countryID = Convert.ToInt32(row["CountryID"]),
-                            cityID = Convert.ToInt32(row["CityID"]),
+                            //countryID = Convert.ToInt32(row["CountryID"]),
+                            //cityID = Convert.ToInt32(row["CityID"]),
                             studentEmail = row["StudentEmail"].ToString(),
                             contactNo = row["StudentContactNo"].ToString(),
-                            industryID = Convert.ToInt32(row["IndustryID"]),
-                            qualID = Convert.ToInt32(row["QualificationID"]),
-                            skillID = Convert.ToInt32(row["SkillID"]),
-                            driversLicence = row["DriversLicense"].ToString(),
+                            //industryID = Convert.ToInt32(row["IndustryID"]),
+                            //qualID = Convert.ToInt32(row["QualificationID"]),
+                            //skillID = Convert.ToInt32(row["SkillID"]),
+                            //driversLicence = row["DriversLicense"].ToString(),
                             //profilePicture = (Byte[])(row["StudentProfilePicture"]),
                             studentUsername = row["StudentUsername"].ToString(),
-                            studentPasssword = row["StudentPassword"].ToString(),
+                            //studentPasssword = row["StudentPassword"].ToString(),
                            // cv = (Byte[])(row["CV"]),
-                            statusID = Convert.ToInt32(row["StatusID"]),
+                            //statusID = Convert.ToInt32(row["StatusID"]),
                             lastUpdated = Convert.ToDateTime(row["LastUpdate"])
                         };
                         students.Add(gas);
@@ -595,18 +608,18 @@ namespace DAL
                     {
                         UspGetAllEmployers gae = new UspGetAllEmployers
                         {
-                            employer_id = Convert.ToInt32(row["Employer_ID"]),
+                            //employer_id = Convert.ToInt32(row["Employer_ID"]),
                             employerName = row["EmployerName"].ToString(),
                             employerDescription = row["EmployerDescription"].ToString(),
-                            CityID = Convert.ToInt32(row["CityID"]),
-                            countryID = Convert.ToInt32(row["CountryID"]),
+                            //CityID = Convert.ToInt32(row["CityID"]),
+                            //countryID = Convert.ToInt32(row["CountryID"]),
                             email = row["Email"].ToString(),
                             vatNo = row["VATno"].ToString(),
                             employerUsername = row["EmployerUsername"].ToString(),
-                            employerPassword = row["EmployerPassword"].ToString(),
+                            //employerPassword = row["EmployerPassword"].ToString(),
                             contactPerson = row["ContactPerson"].ToString(),
                             contactEmail = row["ContactEmail"].ToString(),
-                            industryID = Convert.ToInt32(row["IndustryID"])
+                            //industryID = Convert.ToInt32(row["IndustryID"])
                         };
                         employers.Add(gae);
                     }

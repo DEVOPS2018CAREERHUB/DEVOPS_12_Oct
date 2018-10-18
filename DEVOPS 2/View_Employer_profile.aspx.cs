@@ -58,7 +58,10 @@ namespace DEVOPS_2
                     txtCountry.Text = gep.countryDescription.ToString();
                     txtCity.Text = gep.cityDescription.ToString();
                     txtIndustry.Text = gep.industryDescription.ToString();
-                }catch(Exception ex)
+                    //Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('You have successfully updated your profile.');</script>" + ex);
+
+                }
+                catch (Exception ex)
                 {
                     Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('There was a problem with viewing your profile.');</script>" + ex);
 
@@ -70,41 +73,40 @@ namespace DEVOPS_2
 
         protected void btnFinalUpdate_Click(object sender, EventArgs e)
         {
-            HttpPostedFile logo;
+           // HttpPostedFile logo;
             UpdateEmployerProfile uep = new UpdateEmployerProfile();
-            
-            try
-            {
-                
+
+            //try
+            //{
+                uep.name = txtEmployerName.Text;
                 uep.cityID = Convert.ToInt32(ddlCity.SelectedItem.Value);
                 uep.contactEmail = txtContactEmail.Text;
                 uep.contactPerson = txtContactPerson.Text;
                 uep.countryID = Convert.ToInt32(ddlCountry.SelectedItem.Value);
-                uep.employerDescription = txtDescription.Text;
+                uep.description = txtDescription.Text;
                 uep.email = txtEmail.Text;
-                uep.employerPassword = txtPassword.Text;
-                uep.employerUserName = txtUsername.Text;
+                uep.empPassword = txtPassword.Text;
+                uep.empUserName = txtUsername.Text;
                 
 
                 //logo = uploadImage.PostedFile;
                 //int profilepictureint = logo.ContentLength;
                 //byte[] bytImg = new byte[profilepictureint];
                 //uep.logo = bytImg;
-                uep.logo = null;
 
-                uep.employerName = txtEmployerName.Text;
+                
                 uep.statusID = 1;
-                uep.vatNo = txtVAT.Text;
+                uep.vat = txtVAT.Text;
                 uep.industryID = Convert.ToInt32(ddlIndustry.SelectedItem.Value);
 
                 BLL_handler.BLL_UpdateEmployerProfile(uep);
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('You have successfully updated your profile');</script>");
 
-            }
-            catch(Exception ex)
-            {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('You profile was not updated');</script>");
-            }
+            //}
+            //catch(Exception ex)
+            //{
+            //    Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('You profile was not updated');</script>");
+            //}
         }
 
         protected void btnUpdateEmployerProfile_Click(object sender, EventArgs e)
