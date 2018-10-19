@@ -67,6 +67,16 @@ namespace BLL
             return dBAccess.DeleteStudent(deleteStudent);
         }
 
+        public bool BLL_DeleteStudentSkill(DeleteStudentSkill deleteStudentSkill)
+        {
+            return dBAccess.DeleteStudentSkill(deleteStudentSkill);
+        }
+
+        public bool BLL_DeleteStudentQual(DeleteStudentQual deleteStudentQual)
+        {
+            return dBAccess.DeleteStudentQual(deleteStudentQual);
+        }
+
         public bool BLL_DeleteEmployer(DeleteEmployer deleteEmployer)
         {
             return dBAccess.DeleteEmployer(deleteEmployer);
@@ -86,10 +96,10 @@ namespace BLL
             return dBAccess.GetAllJobPostsByEmployer(employerID);
         }
 
-        public UspGetAllJobPosts BLL_GetAllJobPosts(int employerID)
-        {
-            return dBAccess.GetAllJobPosts(employerID);
-        }
+        //public UspGetAllJobPosts BLL_GetAllJobPosts(int employerID)
+        //{
+        //    return dBAccess.GetAllJobPosts(employerID);
+        //}
         public UspGetAllJobPostsByQualification BLL_GetAllJobPostsByQualification(int qualID)
         {
             return dBAccess.GetAllJobPostsByQualification(qualID);
@@ -134,6 +144,10 @@ namespace BLL
         {
             return dBAccess.GetAllCountries();
         }
+        public List<UspGetAllJobPosts> BLL_GetAllJobPosts()
+        {
+            return dBAccess.GetAllJobPosts();
+        }
 
         public List<UspGetAllCities> BLL_GetAllCities()
         {
@@ -158,6 +172,11 @@ namespace BLL
         public List<UspGetStudentProfile> BLL_GetStudentProfile(int studentNo)
         {
             return dBAccess.GetStudentProfile(studentNo);
+        }
+
+        public List<UspNumberOfStudents> BLL_NumberOfStudents()
+        {
+            return dBAccess.GetNumberOfStudents();
         }
         public UspGetStudentProfile BLL_GetStudentProfile1(int studentNumber)
         {

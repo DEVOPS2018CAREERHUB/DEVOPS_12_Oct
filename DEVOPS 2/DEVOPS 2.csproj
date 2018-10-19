@@ -388,6 +388,7 @@
     <Compile Include="TypeLibrary\ViewModels\UspGetSelectedJobDetails.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetSelectedStudentDetails.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetStudentProfile.cs" />
+    <Compile Include="TypeLibrary\ViewModels\UspNumberOfStudents.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspSearchJobs.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspSearchStudents.cs" />
     <Compile Include="UpdateStudentProfile.aspx.cs">
@@ -403,12 +404,6 @@
     </Compile>
     <Compile Include="ViewAddJob.aspx.designer.cs">
       <DependentUpon>ViewAddJob.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ViewAddJob2.aspx.cs">
-      <DependentUpon>ViewAddJob2.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ViewAddJob2.aspx.designer.cs">
-      <DependentUpon>ViewAddJob2.aspx</DependentUpon>
     </Compile>
     <Compile Include="View_Employer_profile.aspx.cs">
       <DependentUpon>View_Employer_profile.aspx</DependentUpon>

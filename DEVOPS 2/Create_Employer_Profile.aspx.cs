@@ -35,10 +35,10 @@ namespace DEVOPS_2
             ddlCity.DataValueField = "CityID";
             ddlCity.DataBind();
 
-            ddlIndustry.DataSource = BLL_handler.BLL_GetAllIndustries();
-            ddlIndustry.DataTextField = "IndustryDescription";
-            ddlIndustry.DataValueField = "IndustryID";
-            ddlIndustry.DataBind();
+            ddlEmployerIndustry.DataSource = BLL_handler.BLL_GetAllIndustries();
+            ddlEmployerIndustry.DataTextField = "IndustryDescription";
+            ddlEmployerIndustry.DataValueField = "IndustryID";
+            ddlEmployerIndustry.DataBind();
 
 
             }
@@ -60,13 +60,15 @@ namespace DEVOPS_2
                 addEmployer.employerDescription = txtDescription.Text;
                 addEmployer.countryID = Convert.ToInt32(ddlCountry.SelectedItem.Value);
                 addEmployer.cityID = Convert.ToInt32(ddlCity.SelectedItem.Value);
-                addEmployer.industryID = Convert.ToInt32(ddlIndustry.SelectedItem.Value);
+                addEmployer.industryID = Convert.ToInt32(txtChosenIndID.Text);
                 addEmployer.email = txtEmail.Text;
                 addEmployer.vatNo = txtVAT.Text;
+
                 Logo1 = uploadLogo.PostedFile;
                 int logoint = Logo1.ContentLength;
                 byte[] bytLogo = new byte[logoint];
                 addEmployer.logo = bytLogo;
+
                 addEmployer.employerUsername = txtUsername.Text;
                 addEmployer.employerPassword = txtPassword.Text;
                 addEmployer.contactPerson = txtContactPerson.Text;
@@ -92,6 +94,34 @@ namespace DEVOPS_2
                 txtContactEmail.Text = "";
 
             }
+        }
+
+        protected void btnAddNewIndustry_Click(object sender, EventArgs e)
+        {
+            AddNewIndustry addNewIndustry = new AddNewIndustry();
+            string newIndustry = txtAddNewIndustry.Text;
+            if (txtAddNewIndustry.Text != null)
+            {
+                addNewIndustry.industryDescription = newIndustry;
+                BLL_handler.BLL_AddNewIndustry(addNewIndustry);
+            }
+            else
+            {
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('No new Industry entered');</script>");
+            }
+            ddlEmployerIndustry.DataSource = BLL_handler.BLL_GetAllIndustries();
+            ddlEmployerIndustry.DataTextField = "IndustryDescription";
+            ddlEmployerIndustry.DataValueField = "IndustryID";
+            ddlEmployerIndustry.DataBind();
+            txtAddNewIndustry.Text = null;
+            txtChosenIndustry.Text = null;
+            txtChosenIndID.Text = null;
+        }
+
+        protected void ddlEmployerIndustry_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtChosenIndID.Text = ddlEmployerIndustry.SelectedIndex.ToString();
+            txtChosenIndustry.Text = ddlEmployerIndustry.SelectedItem.ToString();
         }
     }
 }
