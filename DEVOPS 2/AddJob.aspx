@@ -25,6 +25,7 @@
 			-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,1);
 			color: #0000FF;
 			opacity: .78; 
+
 		}
 		.testing {
 			opacity: .78; 
