@@ -105,6 +105,8 @@
     <Content Include="Create_Student_Profile.aspx" />
     <Content Include="DAL.csproj" />
     <Content Include="EmployerLogin.aspx" />
+    <Content Include="EMPLOYER\EMP_HomePage.aspx" />
+    <Content Include="EMPLOYER\EMP_SearchPage.aspx" />
     <Content Include="Employer_HomePage.aspx" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="GettingStarted_Page.aspx" />
@@ -164,6 +166,8 @@
     <Content Include="Employer.Master" />
     <Content Include="Student.Master" />
     <Content Include="General.Master" />
+    <Content Include="STUDENT\STUD.Master" />
+    <Content Include="EMPLOYER\EMP.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -176,6 +180,8 @@
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="StudentLogin2.aspx" />
+    <Content Include="STUDENT\STUD_HomePage.aspx" />
+    <Content Include="STUDENT\STUD_SearchPage.aspx" />
     <Content Include="Student_HomePage.aspx" />
     <Content Include="UpdateStudentProfile.aspx" />
     <Content Include="ViewAddJob.aspx" />
@@ -230,6 +236,27 @@
     <Compile Include="EmployerLogin.aspx.designer.cs">
       <DependentUpon>EmployerLogin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EMPLOYER\EMP.Master.cs">
+      <DependentUpon>EMP.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EMPLOYER\EMP.Master.designer.cs">
+      <DependentUpon>EMP.Master</DependentUpon>
+    </Compile>
+    <Compile Include="EMPLOYER\EMP_HomePage.aspx.cs">
+      <DependentUpon>EMP_HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EMPLOYER\EMP_HomePage.aspx.designer.cs">
+      <DependentUpon>EMP_HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EMPLOYER\EMP_SearchPage.aspx.cs">
+      <DependentUpon>EMP_SearchPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EMPLOYER\EMP_SearchPage.aspx.designer.cs">
+      <DependentUpon>EMP_SearchPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Employer_HomePage.aspx.cs">
       <DependentUpon>Employer_HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -280,6 +307,27 @@
     <Compile Include="StudentLogin2.aspx.designer.cs">
       <DependentUpon>StudentLogin2.aspx</DependentUpon>
     </Compile>
+    <Compile Include="STUDENT\STUD.Master.cs">
+      <DependentUpon>STUD.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="STUDENT\STUD.Master.designer.cs">
+      <DependentUpon>STUD.Master</DependentUpon>
+    </Compile>
+    <Compile Include="STUDENT\STUD_HomePage.aspx.cs">
+      <DependentUpon>STUD_HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="STUDENT\STUD_HomePage.aspx.designer.cs">
+      <DependentUpon>STUD_HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="STUDENT\STUD_SearchPage.aspx.cs">
+      <DependentUpon>STUD_SearchPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="STUDENT\STUD_SearchPage.aspx.designer.cs">
+      <DependentUpon>STUD_SearchPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Student_HomePage.aspx.cs">
       <DependentUpon>Student_HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -308,8 +356,10 @@
     <Compile Include="TypeLibrary\ViewModels\UspGetAdminLogin.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetAllCities.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetAllCountries.cs" />
+    <Compile Include="TypeLibrary\ViewModels\UspGetAllEmployerNames.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetAllEmployers.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetAllIndustries.cs" />
+    <Compile Include="TypeLibrary\ViewModels\UspGetAllJobPostBySearch.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetAllJobPosts.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetAllJobPostsByEmployer.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetAllJobPostsByQualification.cs" />
@@ -323,10 +373,24 @@
     <Compile Include="TypeLibrary\ViewModels\UspGetAllStudents.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetAllStudentsByCity.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetAllStudentsByQualification.cs" />
+    <Compile Include="TypeLibrary\ViewModels\UspGetAllStudentsBySearch.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetAllStudentsBySkill.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetAllStudentsForAdmin.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetEmployerProfile.cs" />
+    <Compile Include="TypeLibrary\ViewModels\UspGetJobTotalsByClosingDate.cs" />
+    <Compile Include="TypeLibrary\ViewModels\UspGetJobTotalsByQualification.cs" />
+    <Compile Include="TypeLibrary\ViewModels\UspGetJobTotalsBySkill.cs" />
+    <Compile Include="TypeLibrary\ViewModels\UspGetMostRecentJobPosts.cs" />
+    <Compile Include="TypeLibrary\ViewModels\UspGetMostRecentStudents.cs" />
+    <Compile Include="TypeLibrary\ViewModels\UspGetSelectedJobDetails.cs" />
+    <Compile Include="TypeLibrary\ViewModels\UspGetSelectedStudentDetails.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspGetStudentProfile.cs" />
+    <Compile Include="TypeLibrary\ViewModels\UspGetStudentTotalsByDrivers.cs" />
+    <Compile Include="TypeLibrary\ViewModels\UspGetStudentTotalsByQualification.cs" />
+    <Compile Include="TypeLibrary\ViewModels\UspGetStudentTotalsBySkill.cs" />
+    <Compile Include="TypeLibrary\ViewModels\UspGetTotalEmployers.cs" />
+    <Compile Include="TypeLibrary\ViewModels\UspGetTotalJobPosts.cs" />
+    <Compile Include="TypeLibrary\ViewModels\UspGetTotalStudents.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspSearchJobs.cs" />
     <Compile Include="TypeLibrary\ViewModels\UspSearchStudents.cs" />
     <Compile Include="UpdateStudentProfile.aspx.cs">

@@ -5,9 +5,9 @@ using System.Web;
 
 namespace TypeLibrary.ViewModels
 {
-    public class UspGetAllQualifications
+    public class UspGetStudentTotalsByQualification
     {
-        public int QualID { get; set; }
         public string QualificationDescription { get; set; }
+        public int Total { get; set; }
     }
 }

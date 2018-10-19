@@ -58,6 +58,29 @@ namespace TypeLibrary.Interfaces
 
         UspSearchStudents BLL_SearchStudents(int cityID, int typeID, int employerID);
         UspSearchJobs BLL_SearchJobs(int cityID, int qualID, int skillID);
+
+        //N_A------------------------------------------------------------------------------------------------------
+        //------------------------------ADMIN STUFF---------------------------
+        List<UspGetTotalEmployers> BLL_GetTotalEmployers();
+        List<UspGetTotalStudents> BLL_GetTotalStudents();
+        List<UspGetTotalJobPosts> BLL_GetTotalJobPosts();
+
+        //------------------------------STUDENT SEARCH STUFF---------------------------
+        List<UspGetAllEmployerNames> BLL_GetAllEmployerNames();
+        List<UspGetMostRecentJobPosts> BLL_GetMostRecentJobPosts();
+        List<UspGetJobTotalsByClosingDate> BLL_GetJobTotalsByClosingDate();
+        List<UspGetJobTotalsByQualification> BLL_GetJobTotalsByQualification();
+        List<UspGetJobTotalsBySkill> BLL_GetJobTotalsBySkill();
+        List<UspGetAllJobPostBySearch> BLL_GetAllJobPostBySearch(int cityID, int qualID, int skillID);
+        List<UspGetSelectedJobDetails> BLL_GetSelectedJobDetails();
+
+        //------------------------------EMPLOYER SEARCH STUFF---------------------------
+        List<UspGetMostRecentStudents> BLL_GetMostRecentStudents();
+        UspGetAllStudentsBySearch BLL_GetAllStudentsBySearch(int cityID, int typeID, int employerID);
+        List<UspGetStudentTotalsByQualification> BLL_GetStudentTotalsByQualification();
+        List<UspGetStudentTotalsBySkill> BLL_GetStudentTotalsBySkill();
+        List<UspGetStudentTotalsByDrivers> BLL_GetStudentTotalsByDrivers();
+        List<UspGetSelectedStudentDetails> BLL_GetSelectedStudentDetails();
     }
 
 }

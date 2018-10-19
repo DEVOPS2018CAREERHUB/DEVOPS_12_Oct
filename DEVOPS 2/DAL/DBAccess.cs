@@ -816,7 +816,7 @@ namespace DAL
                         UspGetAllQualifications qual = new UspGetAllQualifications
                         {
                             QualID = Convert.ToInt32(row["QualID"]),
-                            QualificationDesctiption = row["QualificationDescription"].ToString()
+                            QualificationDescription = row["QualificationDescription"].ToString()
                         };
                         qualification.Add(qual);
                     }
@@ -1057,5 +1057,391 @@ namespace DAL
         }
 
 
+        //N_A------------------------------------------------------------------------------------------------------
+        //------------------------------ADMIN STUFF---------------------------
+        public List<UspGetTotalEmployers> GetTotalEmployers()
+        {
+            List<UspGetTotalEmployers> totEmp = new List<UspGetTotalEmployers>();
+            using (DataTable table = DBHelper.Select("uspGetTotalEmployers", CommandType.StoredProcedure))
+            {
+                if (table.Rows.Count > 0)
+                {
+                    foreach (DataRow row in table.Rows)
+                    {
+                        UspGetTotalEmployers gte = new UspGetTotalEmployers
+                        {
+
+                            Total_Employers = Convert.ToInt32(row["Total Employers"]),
+                        };
+                        totEmp.Add(gte);
+                    }
+                }
+            }
+            return totEmp;
+        }
+
+        public List<UspGetTotalStudents> GetTotalStudents()
+        {
+            List<UspGetTotalStudents> totStu = new List<UspGetTotalStudents>();
+            using (DataTable table = DBHelper.Select("uspGetTotalStudents", CommandType.StoredProcedure))
+            {
+                if (table.Rows.Count > 0)
+                {
+                    foreach (DataRow row in table.Rows)
+                    {
+                        UspGetTotalStudents gts = new UspGetTotalStudents
+                        {
+
+                            Total_Students = Convert.ToInt32(row["Total Students"]),
+                        };
+                        totStu.Add(gts);
+                    }
+                }
+            }
+            return totStu;
+        }
+
+        public List<UspGetTotalJobPosts> GetTotalJobPosts()
+        {
+            List<UspGetTotalJobPosts> totJob = new List<UspGetTotalJobPosts>();
+            using (DataTable table = DBHelper.Select("uspGetTotalJobPosts", CommandType.StoredProcedure))
+            {
+                if (table.Rows.Count > 0)
+                {
+                    foreach (DataRow row in table.Rows)
+                    {
+                        UspGetTotalJobPosts gtjp = new UspGetTotalJobPosts
+                        {
+
+                            Total_Job_Posts = Convert.ToInt32(row["Total Job Posts"]),
+                        };
+                        totJob.Add(gtjp);
+                    }
+                }
+            }
+            return totJob;
+        }
+
+        //------------------------------STUDENT SEARCH STUFF---------------------------
+        public List<UspGetAllEmployerNames> GetAllEmployerNames()
+        {
+            List<UspGetAllEmployerNames> emps = new List<UspGetAllEmployerNames>();
+            using (DataTable table = DBHelper.Select("uspGetAllEmployerNames", CommandType.StoredProcedure))
+            {
+                if (table.Rows.Count > 0)
+                {
+                    foreach (DataRow row in table.Rows)
+                    {
+                        UspGetAllEmployerNames gae = new UspGetAllEmployerNames
+                        {
+                            Employer_ID = Convert.ToInt32(row["Employer_ID"]),
+                            EmployerName = row["EmployerName"].ToString()
+                        };
+                        emps.Add(gae);
+                    }
+                }
+            }
+            return emps;
+        }
+
+        public List<UspGetMostRecentJobPosts> GetMostRecentJobPosts()
+        {
+            List<UspGetMostRecentJobPosts> rjp = new List<UspGetMostRecentJobPosts>();
+            using (DataTable table = DBHelper.Select("uspGetMostRecentJobPosts", CommandType.StoredProcedure))
+            {
+                if (table.Rows.Count > 0)
+                {
+                    foreach (DataRow row in table.Rows)
+                    {
+                        UspGetMostRecentJobPosts more = new UspGetMostRecentJobPosts
+                        {
+                            //Logo = Convert.ToByte(row["Logo"]),
+                            JobID = Convert.ToInt32(row["JobID"]),
+                            JobTitle = row["JobTitle"].ToString(),
+                            CityDescription = row["CityDescription"].ToString(),
+                            TypeDescription = row["TypeDescription"].ToString(),
+                            DateClosing = Convert.ToDateTime(row["DateClosing"])
+                        };
+                        rjp.Add(more);
+                    }
+                }
+            }
+            return rjp;
+        }
+
+
+        public List<UspGetJobTotalsByClosingDate> GetJobTotalsByClosingDate()
+        {
+            List<UspGetJobTotalsByClosingDate> dc = new List<UspGetJobTotalsByClosingDate>();
+            using (DataTable table = DBHelper.Select("uspGetJobTotalsByClosingDate", CommandType.StoredProcedure))
+            {
+                if (table.Rows.Count > 0)
+                {
+                    foreach (DataRow row in table.Rows)
+                    {
+                        UspGetJobTotalsByClosingDate gts = new UspGetJobTotalsByClosingDate
+                        {
+                            DateClosing = row["DateClosing"].ToString(),
+                            Total = Convert.ToInt32(row["Total"])
+                        };
+                        dc.Add(gts);
+                    }
+                }
+            }
+            return dc;
+        }
+
+
+        public List<UspGetJobTotalsByQualification> GetJobTotalsByQualification()
+        {
+            List<UspGetJobTotalsByQualification> jtot = new List<UspGetJobTotalsByQualification>();
+            using (DataTable table = DBHelper.Select("uspGetJobTotalsByQualification", CommandType.StoredProcedure))
+            {
+                if (table.Rows.Count > 0)
+                {
+                    foreach (DataRow row in table.Rows)
+                    {
+                        UspGetJobTotalsByQualification gtq = new UspGetJobTotalsByQualification
+                        {
+                            QualificationDescription = row["QualificationDescription"].ToString(),
+                            Total = Convert.ToInt32(row["Total"])
+                        };
+                        jtot.Add(gtq);
+                    }
+                }
+            }
+            return jtot;
+        }
+
+        public List<UspGetJobTotalsBySkill> GetJobTotalsBySkill()
+        {
+            List<UspGetJobTotalsBySkill> jtot = new List<UspGetJobTotalsBySkill>();
+            using (DataTable table = DBHelper.Select("uspGetJobTotalsBySkill", CommandType.StoredProcedure))
+            {
+                if (table.Rows.Count > 0)
+                {
+                    foreach (DataRow row in table.Rows)
+                    {
+                        UspGetJobTotalsBySkill gtq = new UspGetJobTotalsBySkill
+                        {
+
+                            SkillDescription = row["SkillDescription"].ToString(),
+                            Total = Convert.ToInt32(row["Total"])
+                        };
+                        jtot.Add(gtq);
+                    }
+                }
+            }
+            return jtot;
+        }
+
+        public List<UspGetAllJobPostBySearch> GetAllJobPostBySearch(int cityID, int qualID, int skillID)
+        {
+            List<UspGetAllJobPostBySearch> ss = new List<UspGetAllJobPostBySearch>();
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@cityID", cityID),
+                new SqlParameter("@qualID", qualID),
+                new SqlParameter("@skillID", skillID)
+            };
+            using (DataTable table = DBHelper.ParamSelect("UspGetAllJobPostBySearch", CommandType.StoredProcedure, param))
+            {
+                //Check if any record exists
+                if (table.Rows.Count == 1)
+                {
+                    DataRow row = table.Rows[0];
+                    UspGetAllJobPostBySearch jps = new UspGetAllJobPostBySearch
+                    {
+                        JobID = Convert.ToInt32(row["JobID"]),
+                        JobTitle = row["JobTitle"].ToString(),
+                        CityDescription = row["CityDescription"].ToString(),
+                        TypeDescription = row["TypeDescription"].ToString(),
+                        DateClosing = Convert.ToDateTime(row["DateClosing"])
+
+                    };
+                    ss.Add(jps);
+                }
+            }
+            return ss;
+        }
+
+
+        public List<UspGetSelectedJobDetails> GetSelectedJobDetails()
+        {
+            List<UspGetSelectedJobDetails> jtot = new List<UspGetSelectedJobDetails>();
+            using (DataTable table = DBHelper.Select("uspGetSelectedJobDetails>", CommandType.StoredProcedure))
+            {
+                if (table.Rows.Count > 0)
+                {
+                    foreach (DataRow row in table.Rows)
+                    {
+                        UspGetSelectedJobDetails gtq = new UspGetSelectedJobDetails
+                        {
+                            JobID = Convert.ToInt32(row["JobID"]),
+                            DatePosted = Convert.ToDateTime(row["DatePosted"]),
+                            DateClosing = Convert.ToDateTime(row["DateClosing"]),
+                            CityDescription = row["CityDescription"].ToString(),
+                            JobDescription = row["JobDescription"].ToString(),
+                            KeyResponsibilities = row["KeyResponsebilities"].ToString(),
+                            QualificationDescription = row["QualificationDescription"].ToString(),
+                            SkillDescription = row["SkillDescription"].ToString(),
+                            TypeDescription = row["TypeDescription"].ToString(),
+
+                        };
+                        jtot.Add(gtq);
+                    }
+                }
+            }
+            return jtot;
+        }
+        //------------------------------EMPLOYER SEARCH STUFF---------------------------
+        public List<UspGetMostRecentStudents> GetMostRecentStudents()
+        {
+            List<UspGetMostRecentStudents> gmrs = new List<UspGetMostRecentStudents>();
+            using (DataTable table = DBHelper.Select("uspGetMostRecentStudents", CommandType.StoredProcedure))
+            {
+                if (table.Rows.Count > 0)
+                {
+                    foreach (DataRow row in table.Rows)
+                    {
+                        UspGetMostRecentStudents mors = new UspGetMostRecentStudents
+                        {
+                            //ProfilePicture = Convert.ToByte(row["StudentProfilePicture"]),
+                            StudentNo = Convert.ToInt32(row["StudentNo"]),
+                            Student = row["Student"].ToString(),
+                            CityDescription = row["CityDescription"].ToString(),
+                            QualificationDescription = row["QualificationDescription"].ToString(),
+                            SkillDescription = row["SkillDescription"].ToString(),
+                            StudentEmail = row["StudentEmail"].ToString(),
+                            //CV = Convert.ToByte(row["CV"])
+                        };
+                        gmrs.Add(mors);
+                    }
+                }
+            }
+            return gmrs;
+        }
+
+        public UspGetAllStudentsBySearch GetAllStudentsBySearch(int cityID, int qualID, int skillID)
+        {
+            UspGetAllStudentsBySearch ss = null;
+            SqlParameter[] param = new SqlParameter[]
+            {
+                new SqlParameter("@cityID", cityID),
+                new SqlParameter("@qualID", qualID),
+                new SqlParameter("@skillID", skillID)
+            };
+            using (DataTable table = DBHelper.ParamSelect("UspGetAllStudentsBySearch", CommandType.StoredProcedure, param))
+            {
+                //Check if any record exists
+                if (table.Rows.Count == 1)
+                {
+                    DataRow row = table.Rows[0];
+                    ss = new UspGetAllStudentsBySearch
+                    {
+                        Student = row["Student"].ToString(),
+                        CityDescription = row["CityDescription"].ToString(),
+                        QualificationDescription = row["CityDescription"].ToString(),
+                        SkillDescription = row["SkillDescription"].ToString(),
+                        studentEmail = row["StudentEmail"].ToString()
+                        //cv = Convert.ToByte(row["CV"]),
+
+                    };
+                }
+            }
+            return ss;
+        }
+
+        public List<UspGetStudentTotalsByQualification> GetStudentTotalsByQualification()
+        {
+            List<UspGetStudentTotalsByQualification> totQ = new List<UspGetStudentTotalsByQualification>();
+            using (DataTable table = DBHelper.Select("uspGetStudentTotalsByQualification", CommandType.StoredProcedure))
+            {
+                if (table.Rows.Count > 0)
+                {
+                    foreach (DataRow row in table.Rows)
+                    {
+                        UspGetStudentTotalsByQualification gtq = new UspGetStudentTotalsByQualification
+                        {
+
+                            QualificationDescription = row["QualificationDescription"].ToString(),
+                            Total = Convert.ToInt32(row["Total"])
+                        };
+                        totQ.Add(gtq);
+                    }
+                }
+            }
+            return totQ;
+        }
+        public List<UspGetStudentTotalsBySkill> GetStudentTotalsBySkill()
+        {
+            List<UspGetStudentTotalsBySkill> totS = new List<UspGetStudentTotalsBySkill>();
+            using (DataTable table = DBHelper.Select("uspGetStudentTotalsBySkill", CommandType.StoredProcedure))
+            {
+                if (table.Rows.Count > 0)
+                {
+                    foreach (DataRow row in table.Rows)
+                    {
+                        UspGetStudentTotalsBySkill gts = new UspGetStudentTotalsBySkill
+                        {
+
+                            SkillDescription = row["SkillDescription"].ToString(),
+                            Total = Convert.ToInt32(row["Total"])
+                        };
+                        totS.Add(gts);
+                    }
+                }
+            }
+            return totS;
+        }
+
+        public List<UspGetStudentTotalsByDrivers> GetStudentTotalsByDrivers()
+        {
+            List<UspGetStudentTotalsByDrivers> tdl = new List<UspGetStudentTotalsByDrivers>();
+            using (DataTable table = DBHelper.Select("uspGetStudentTotalsByDrivers", CommandType.StoredProcedure))
+            {
+                if (table.Rows.Count > 0)
+                {
+                    foreach (DataRow row in table.Rows)
+                    {
+                        UspGetStudentTotalsByDrivers gtq = new UspGetStudentTotalsByDrivers
+                        {
+                            DriversLicense = row["DriversLicense"].ToString(),
+                            Total = Convert.ToInt32(row["Total"])
+                        };
+                        tdl.Add(gtq);
+                    }
+                }
+            }
+            return tdl;
+        }
+
+        public List<UspGetSelectedStudentDetails> GetSelectedStudentDetails()
+        {
+            List<UspGetSelectedStudentDetails> jtot = new List<UspGetSelectedStudentDetails>();
+            using (DataTable table = DBHelper.Select("uspGetSelectedStudentDetails", CommandType.StoredProcedure))
+            {
+                if (table.Rows.Count > 0)
+                {
+                    foreach (DataRow row in table.Rows)
+                    {
+                        UspGetSelectedStudentDetails gt = new UspGetSelectedStudentDetails
+                        {
+
+
+
+                            CityDescription = row["CityDescription"].ToString(),
+
+                            QualificationDescription = row["QualificationDescription"].ToString(),
+                            SkillDescription = row["SkillDescription"].ToString(),
+
+
+                        };
+                        jtot.Add(gt);
+                    }
+                }
+            }
+            return jtot;
+        }
     }// END class DBACCESS
 }//END namespace

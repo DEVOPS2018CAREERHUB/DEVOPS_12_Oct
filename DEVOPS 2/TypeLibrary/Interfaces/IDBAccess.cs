@@ -52,5 +52,28 @@ namespace TypeLibrary.Interfaces
         UspSearchStudents SearchStudents(int cityID, int typeID, int employerID);
         UspSearchJobs SearchJobs(int cityID, int qualID, int skillID);
 
+        //N_A------------------------------------------------------------------------------------------------------
+        //------------------------------ADMIN STUFF---------------------------
+        List<UspGetTotalEmployers> GetTotalEmployers();
+        List<UspGetTotalStudents> GetTotalStudents();
+        List<UspGetTotalJobPosts> GetTotalJobPosts();
+
+        //------------------------------STUDENT SEARCH STUFF---------------------------
+        List<UspGetAllEmployerNames> GetAllEmployerNames();
+        List<UspGetMostRecentJobPosts> GetMostRecentJobPosts();
+        List<UspGetJobTotalsByClosingDate> GetJobTotalsByClosingDate();
+        List<UspGetJobTotalsByQualification> GetJobTotalsByQualification();
+        List<UspGetJobTotalsBySkill> GetJobTotalsBySkill();
+        List<UspGetAllJobPostBySearch> GetAllJobPostBySearch(int cityID, int qualID, int skillID);
+        List<UspGetSelectedJobDetails> GetSelectedJobDetails();
+
+        //------------------------------EMPLOYER SEARCH STUFF---------------------------
+        List<UspGetMostRecentStudents> GetMostRecentStudents();
+        UspGetAllStudentsBySearch GetAllStudentsBySearch(int cityID, int typeID, int employerID);
+        List<UspGetStudentTotalsByQualification> GetStudentTotalsByQualification();
+        List<UspGetStudentTotalsBySkill> GetStudentTotalsBySkill();
+        List<UspGetStudentTotalsByDrivers> GetStudentTotalsByDrivers();
+        List<UspGetSelectedStudentDetails> GetSelectedStudentDetails();
+
     }
 }

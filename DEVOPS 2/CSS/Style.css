@@ -1,0 +1,84 @@
+﻿.block {
+    float: left;
+    padding: 60px 0;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.block .container, .container {
+    max-width: 100%;
+    padding: 0 15px;
+}
+.how-works {
+    float: left;
+    width: 100%;
+    position: relative;
+    margin-bottom: 100px;
+}
+.how-working {
+    float: left;
+    width: 55%;
+    position: relative;
+    display: table;
+    z-index: 0;
+}
+.how-work-detail {
+    position: static;
+    float: left;
+    width: 100%;
+    padding: 0;
+    
+    -webkit-border-radius: 0 0;
+    -moz-border-radius: 0 0;
+    -ms-border-radius: 0 0;
+    -o-border-radius: 0 0;
+    border-radius: 0 0;
+
+}
+.how-work-box {
+    padding: 57px 60px;
+}
+.la{font:normal normal normal 16px/1 LineAwesome;font-size:inherit;text-decoration:inherit;text-rendering:optimizeLegibility;text-transform:none; -moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased; font-smoothing:antialiased;
+}
+.la-user:before {
+	content: "\f364";
+}
+.la-user-md:before {
+	content: "\f365";
+}
+.la-user-plus:before {
+	content: "\f366";
+}
+.la-user-secret:before {
+	content: "\f367";
+}
+.la-user-times:before {
+	content: "\f368";
+}
+.la-users:before {
+	content: "\f369";
+}
+.account-popup > form .cfield {
+    float: left;
+    width: 100%;
+    position: relative;
+    margin-bottom: 19px;
+    border: 2px solid #e8ecec;
+    
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border-radius: 8px;
+
+}
+
+.la-pencil:before {
+	content: "\f2b0";
+}
+.la-pencil-square:before {
+	content: "\f2b1";
+}
+.la-pencil-square-o:before {
+	content: "\f2b2";
+}

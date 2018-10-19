@@ -230,6 +230,87 @@ namespace BLL
         //    return dBAccess.GetAllQualifications();
         //}
 
+        //N_A-----------------------------------------------------------------------------------------------------N_A
+        //------------------------------ADMIN STUFF---------------------------
+        public List<UspGetTotalEmployers> BLL_GetTotalEmployers()
+        {
+            return dBAccess.GetTotalEmployers();
+        }
 
+        public List<UspGetTotalStudents> BLL_GetTotalStudents()
+        {
+            return dBAccess.GetTotalStudents();
+        }
+
+        public List<UspGetTotalJobPosts> BLL_GetTotalJobPosts()
+        {
+            return dBAccess.GetTotalJobPosts();
+        }
+
+        //------------------------------STUDENT SEARCH STUFF---------------------------
+        public List<UspGetAllEmployerNames> BLL_GetAllEmployerNames()
+        {
+            return dBAccess.GetAllEmployerNames();
+        }
+
+        public List<UspGetMostRecentJobPosts> BLL_GetMostRecentJobPosts()
+        {
+            return dBAccess.GetMostRecentJobPosts();
+        }
+
+        public List<UspGetJobTotalsByClosingDate> BLL_GetJobTotalsByClosingDate()
+        {
+            return dBAccess.GetJobTotalsByClosingDate();
+        }
+
+        public List<UspGetJobTotalsByQualification> BLL_GetJobTotalsByQualification()
+        {
+            return dBAccess.GetJobTotalsByQualification();
+        }
+
+        public List<UspGetJobTotalsBySkill> BLL_GetJobTotalsBySkill()
+        {
+            return dBAccess.GetJobTotalsBySkill();
+        }
+
+        public List<UspGetAllJobPostBySearch> BLL_GetAllJobPostBySearch(int cityID, int qualID, int skillID)
+        {
+            return dBAccess.GetAllJobPostBySearch(cityID, qualID, skillID);
+        }
+
+        public List<UspGetSelectedJobDetails> BLL_GetSelectedJobDetails()
+        {
+            return dBAccess.GetSelectedJobDetails();
+        }
+
+        //------------------------------EMPLOYER SEARCH STUFF---------------------------
+        public List<UspGetMostRecentStudents> BLL_GetMostRecentStudents()
+        {
+            return dBAccess.GetMostRecentStudents();
+        }
+
+        public UspGetAllStudentsBySearch BLL_GetAllStudentsBySearch(int cityID, int typeID, int employerID)
+        {
+            return dBAccess.GetAllStudentsBySearch(cityID, typeID, employerID);
+        }
+
+        public List<UspGetStudentTotalsByQualification> BLL_GetStudentTotalsByQualification()
+        {
+            return dBAccess.GetStudentTotalsByQualification();
+        }
+        public List<UspGetStudentTotalsBySkill> BLL_GetStudentTotalsBySkill()
+        {
+            return dBAccess.GetStudentTotalsBySkill();
+        }
+
+        public List<UspGetStudentTotalsByDrivers> BLL_GetStudentTotalsByDrivers()
+        {
+            return dBAccess.GetStudentTotalsByDrivers();
+        }
+
+        public List<UspGetSelectedStudentDetails> BLL_GetSelectedStudentDetails()
+        {
+            return dBAccess.GetSelectedStudentDetails();
+        }
     }//END class DBHandler
 }//End namespace BLL
