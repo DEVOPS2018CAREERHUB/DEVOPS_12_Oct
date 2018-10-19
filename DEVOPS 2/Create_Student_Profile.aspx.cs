@@ -134,21 +134,19 @@ namespace DEVOPS_2
             //}
 
 
-
+            int o = 0;
+            int p = 0;
 
             foreach (TableRow s in tblSkillIDs.Rows)
             {
                 foreach (TableCell c in s.Cells)
                 { 
-                int o = Convert.ToInt32(c.Text);
+                o = Convert.ToInt32(c.Text);
                 //if you want to get the string
                 //int s = o = tblSkillIDs.Rows[i];
                 addStudentSkill.studentNo = int.Parse(txtStudentNo.Text);
                 addStudentSkill.skillID = o;
-                    //BLL_handler.BLL_AddStudentSkill(addStudentSkill);
-                    //ddlskillssss.Items.Add(o.ToString());    for testing purposes
-                    //ggg
-                }
+                 }
                 BLL_handler.BLL_AddStudentSkill(addStudentSkill);
             }
 
@@ -156,11 +154,12 @@ namespace DEVOPS_2
             {
                 foreach(TableCell c in s.Cells)
                 {
-                    int o = Convert.ToInt32(c.Text);
+                    p = Convert.ToInt32(c.Text);
                     addStudentQual.studentNo = int.Parse(txtStudentNo.Text);
-                    addStudentQual.qualID = o;
-                    BLL_handler.BLL_AddStudentQual(addStudentQual);
+                    addStudentQual.qualID = p;
+                   
                 }
+                BLL_handler.BLL_AddStudentQual(addStudentQual);
             }
 
 
@@ -177,6 +176,7 @@ namespace DEVOPS_2
                     uploadCV.PostedFile.SaveAs(Server.MapPath("CV/" + f1 + f2));
                     //uploadCV.SaveAs(Server.MapPath("CV\\" + uploadCV.FileName));
                     //Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('yes');</script>");
+
                
             }
 
@@ -252,8 +252,8 @@ namespace DEVOPS_2
                 txtStudUsername.Text = "";
                 txtStudPassword.Text = "";
             }
-            Response.Redirect("View_Student_Profile.aspx?studentNumber=" + txtStudentNo.Text);
-
+            Response.Redirect("View_Student_Profile.aspx?studentNumber=" + txtStudentNo.Text, false);
+            
         }
 
         public void btnImageUpload_Click(object sender, EventArgs e)

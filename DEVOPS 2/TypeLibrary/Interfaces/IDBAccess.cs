@@ -20,11 +20,13 @@ namespace TypeLibrary.Interfaces
         bool DeleteJobPost(DeleteJobPost deletejobpost);
         bool DeleteStudent(DeleteStudent deleteStudent);
         bool DeleteStudentSkill(DeleteStudentSkill deleteStudentSkill);
+        bool DeleteStudentQual(DeleteStudentQual deleteStudentQual);
         bool DeleteEmployer(DeleteEmployer deleteEmployer);
         List<UspGetAllQualifications> GetAllQualifications();
         List<UspGetAllJobType> GetAllJobType();
         List<UspGetAllSkills> GetAllSkills();
         List<UspGetAllStatus> GetAllStatus();
+        List<UspNumberOfStudents> GetNumberOfStudents();
         UspGetAllJobPostsByEmployer GetAllJobPostsByEmployer(int employerID);
         UspGetAllJobPostsByQualification GetAllJobPostsByQualification(int qualID);
         UspGetAllJobPostsBySkill GetAllJobPostsBySkill(int skillID);

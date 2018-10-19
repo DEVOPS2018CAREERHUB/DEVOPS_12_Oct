@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Create_Student_Profile.aspx.cs" Inherits="DEVOPS_2.Create_Student_Profile" EnableViewState="true" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Create_Student_Profile.aspx.cs" Inherits="DEVOPS_2.Create_Student_Profile" EnableViewState="true"  %>
 
 <!DOCTYPE html>
 

@@ -72,6 +72,11 @@ namespace BLL
             return dBAccess.DeleteStudentSkill(deleteStudentSkill);
         }
 
+        public bool BLL_DeleteStudentQual(DeleteStudentQual deleteStudentQual)
+        {
+            return dBAccess.DeleteStudentQual(deleteStudentQual);
+        }
+
         public bool BLL_DeleteEmployer(DeleteEmployer deleteEmployer)
         {
             return dBAccess.DeleteEmployer(deleteEmployer);
@@ -167,6 +172,11 @@ namespace BLL
         public List<UspGetStudentProfile> BLL_GetStudentProfile(int studentNo)
         {
             return dBAccess.GetStudentProfile(studentNo);
+        }
+
+        public List<UspNumberOfStudents> BLL_NumberOfStudents()
+        {
+            return dBAccess.GetNumberOfStudents();
         }
         public UspGetStudentProfile BLL_GetStudentProfile1(int studentNumber)
         {

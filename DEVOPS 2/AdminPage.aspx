@@ -111,7 +111,7 @@
             </div>
         </div>
         <div style="background-image: url('/images/Landing.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-position: inherit bottom bottom;"></div>
-    <div class="shadow" style="z-index: 1; left: 116px; top: 151px; position: absolute; height: 1000px; width: 1300px;">
+    <div class="shadow" style="z-index: 1; left: 116px; top: 151px; position: absolute; height: 1200px; width: 1300px;">
     
         <asp:Label ID="Label1" runat="server" Font-Size="Larger" ForeColor="#000099" style="z-index: 1; left: 118px; top: 49px; position: absolute; height: 26px;" Text="Students"></asp:Label>
         
@@ -122,12 +122,21 @@
         
         <asp:Label ID="lblENterStudNotoDelete" runat="server" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 15px; top: 83px; position: absolute" Text="Enter student number to delete student:"></asp:Label>
         <asp:TextBox ID="txtStudentNoDelete" runat="server" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 335px; top: 80px; position: absolute; margin-top: 0px"></asp:TextBox>
-        <asp:Button ID="btnDeleteStudent" runat="server" Font-Size="Large" ForeColor="#000099" OnClick="btnDeleteStudent_Click" style="z-index: 1; left: 335px; top: 114px; position: absolute" Text="Delete Student" />
+        <asp:Button ID="btnDeleteStudent" runat="server" Font-Size="Large" ForeColor="White" OnClick="btnDeleteStudent_Click" style="z-index: 1; left: 336px; top: 128px; position: absolute" Text="Delete Student" />
     
-        <asp:Button ID="btnStudents" runat="server" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 508px; top: 18px; position: absolute" Text="Students" OnClick="btnStudents_Click" />
-        <asp:Button ID="btnEmployers" runat="server" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 800px; top: 18px; position: absolute" Text="Employers" OnClick="btnEmployers_Click" />
+        <asp:Button ID="btnStudents" runat="server" Font-Size="Large" ForeColor="White" style="z-index: 1; left: 508px; top: 18px; position: absolute" Text="Students" OnClick="btnStudents_Click" />
+        <asp:Button ID="btnEmployers" runat="server" Font-Size="Large" ForeColor="White" style="z-index: 1; left: 800px; top: 18px; position: absolute" Text="Employers" OnClick="btnEmployers_Click" />
 
     </div>
+        <div class ="shadow" style="z-index: 1; left: 116px; top: 950px; position: absolute; height: 300px; width: 1300px;">
+            <asp:Label ID="lblnumberOfStudents" runat="server" Text="Number of active students on the system:" Style="position:absolute; top:60px; left:10px" ></asp:Label>
+            <asp:TextBox ID="txtNumberOfStudents" runat="server" Style="position:absolute; top:51px; left: 402px; height:30px"></asp:TextBox>
+            <asp:Label ID="lblnumberOfEmployers" runat="server" Text="Number of active Employers on the system:" Style="position:absolute; top:115px; left:10px"></asp:Label>
+            <asp:TextBox ID="txtNumberOfEmployers" runat="server" Style="position:absolute; top:100px; left: 402px; height:30px"></asp:TextBox>
+            <asp:Label ID="lblnumberOfJobs" runat="server" Text="Number of Job Posts posted on the system:" Style="position:absolute; top:170px; left:10px"></asp:Label>
+            <asp:TextBox ID="txtNumberOfJobs" runat="server" Style="position:absolute; top:151px; left: 402px; height:30px"></asp:TextBox>
+            <asp:Label ID="lblSystemInfo" runat="server" Font-Size="Larger" Text="System Information" Style="position:absolute; left:550px; width:300px"></asp:Label>
+        </div>
     </form>
 </body>
 </html>

@@ -157,6 +157,18 @@ namespace DAL
             return DBHelper.NonQuery("uspDeleteStudentSkill", CommandType.StoredProcedure, params1.ToArray());
         }
 
+        public bool DeleteStudentQual(DeleteStudentQual deleteStudentQual)
+        {
+            List<SqlParameter> params1 = new List<SqlParameter>();
+            foreach (var prop in deleteStudentQual.GetType().GetProperties())
+            {
+                if (prop.GetValue(deleteStudentQual) != null)
+                {
+                    params1.Add(new SqlParameter("@" + prop.Name.ToString(), prop.GetValue(deleteStudentQual)));
+                }
+            }
+            return DBHelper.NonQuery("uspDeleteStudentQual", CommandType.StoredProcedure, params1.ToArray());
+        }
         public bool DeleteEmployer(DeleteEmployer deleteEmployer)
         {
             List<SqlParameter> params1 = new List<SqlParameter>();
@@ -231,6 +243,7 @@ namespace DAL
                 }
                 return je;
             }
+       
 
         public UspGetAllJobPostsByQualification GetAllJobPostsByQualification(int qualID)
         {
@@ -648,6 +661,26 @@ namespace DAL
                 }
             }
             return cities;
+        }
+
+        public List<UspNumberOfStudents> GetNumberOfStudents()
+        {
+            List<UspNumberOfStudents> number = new List<UspNumberOfStudents>();
+            using(DataTable table = DBHelper.Select("uspNumberOfStudents", CommandType.StoredProcedure))
+            {
+                if(table.Rows.Count > 0)
+                {
+                    foreach(DataRow row in table.Rows)
+                    {
+                        UspNumberOfStudents nos = new UspNumberOfStudents
+                        {
+                            //number = Convert.ToInt32(row["number"])
+                        };
+                        number.Add(nos);
+                    }
+                }
+            }
+            return number;
         }
 
         public List<UspGetAllIndustries> GetAllIndustries()

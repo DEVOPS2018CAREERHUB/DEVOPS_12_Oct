@@ -22,7 +22,7 @@
              background-color: #F0F0F0;
             -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,1);
             color: #0000FF;
-            opacity: .78; 
+            opacity: 90; 
         }
 
     </style>
@@ -33,7 +33,7 @@
     
 
 </head>
-<body style="background-image: url('images/create_Employer_profile.png'); width: 1600px; height: 900px; background-repeat:no-repeat;">
+<body style=" width: 1600px; height: 900px; background-repeat:no-repeat;">
     <form id="form1" runat="server" style="width: 1600px; height: 900px">
         <div class="container-fluid navbar-blue-gradient navbar-fixed-top tbsZindex">
             <div class="container" style="padding-left: 0px; height: 45px">
@@ -111,7 +111,7 @@
             </div>
         </div>
         <div style="background-image: url('/images/Landing.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-position: inherit bottom bottom;"></div>
-    <div class="shadow" style="z-index: 1; left: 116px; top: 151px; position: absolute; height: 100%; width: 100%;">    
+    <div class="shadow" style="z-index: 1; left: 116px; top: 151px; position: absolute; height: 100%; width: 1500px;">    
         <asp:Label ID="Label1" runat="server" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 24px; top: 20px; position: absolute" Text="Admin Username"></asp:Label>
         <asp:Label ID="Label2" runat="server" Font-Size="Large" ForeColor="#000099" style="z-index: 1; left: 24px; top: 55px; position: absolute" Text="Admin Password"></asp:Label>
 
@@ -119,7 +119,7 @@
         <asp:TextBox ID="txtAdminUsername" runat="server" Font-Size="Large" ForeColor="#000099" BackColor="#F0F0F0" BorderWidth="2px" style="z-index: 1; left: 600px; top: 20px; position: absolute"></asp:TextBox>
         <asp:TextBox ID="txtAdminPassword" runat="server" Font-Size="Large" ForeColor="#000099" BackColor="#F0F0F0" BorderWidth="2px" style="z-index: 1; left: 600px; top: 55px; position: absolute"></asp:TextBox>
     
-        <asp:Button ID="btnLogin" runat="server" Font-Size="Larger" ForeColor="#000099" OnClick="btnLogin_Click" style="z-index: 1; left: 333px; top: 272px; position: absolute" Text="Log in" />
+        <asp:Button ID="btnLogin" runat="server" Font-Size="Larger" ForeColor="White" OnClick="btnLogin_Click" style="z-index: 1; left: 333px; top: 272px; position: absolute" Text="Log in" />
     
     </div>
     </form>

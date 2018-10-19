@@ -19,6 +19,7 @@ namespace TypeLibrary.Interfaces
         bool BLL_DeleteJobPost(DeleteJobPost deleteJobPost);
         bool BLL_DeleteStudent(DeleteStudent deleteStudent);
         bool BLL_DeleteStudentSkill(DeleteStudentSkill deleteStudentSkill);
+        bool BLL_DeleteStudentQual(DeleteStudentQual deleteStudentQual);
         bool BLL_DeleteEmployer(DeleteEmployer deleteEmployer);
         UspGetAllJobPostsByEmployer BLL_GetAllJobPostsByEmployer(int employerID);
         //UspGetAllJobPosts BLL_GetAllJobPosts(int employerID);
@@ -36,6 +37,7 @@ namespace TypeLibrary.Interfaces
         List<UspGetAllStudents> BLL_GetAllStudents();
         List<UspGetAllEmployers> BLL_GetAllEmployers();
         List<UspGetAllIndustries> BLL_GetAllIndustries();
+        List<UspNumberOfStudents> BLL_NumberOfStudents();
         List<UspGetStudentProfile> BLL_GetStudentProfile(int studentNo);
         UspGetStudentProfile BLL_GetStudentProfile1(int studentNumber);
         
