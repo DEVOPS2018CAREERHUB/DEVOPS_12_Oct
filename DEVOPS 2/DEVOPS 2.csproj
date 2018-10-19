@@ -406,7 +406,6 @@
     </Compile>
     <Compile Include="ViewAddJob2.aspx.cs">
       <DependentUpon>ViewAddJob2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ViewAddJob2.aspx.designer.cs">
       <DependentUpon>ViewAddJob2.aspx</DependentUpon>
